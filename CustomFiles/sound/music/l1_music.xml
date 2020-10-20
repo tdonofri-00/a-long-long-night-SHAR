@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Composition SoundMemoryMax="1700000" CacheMemoryMax="2000000" StreamSizeMin="500">
+	<FadeTransition SourceRegion="anything" TargetRegion="pause_region" SourceTime="50" SourceStart="0" TargetTime="50" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="anything" SourceTime="10" SourceStart="0" TargetTime="150" TargetStart="0" />
+	<FadeTransition SourceRegion="pause_region" TargetRegion="anything" SourceTime="50" SourceStart="0" TargetTime="50" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="movie_region" SourceTime="50" SourceStart="0" TargetTime="50" TargetStart="0" />
+	<FadeTransition SourceRegion="movie_region" TargetRegion="anything" SourceTime="50" SourceStart="0" TargetTime="500" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="anything" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>3</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="FE_region" TargetRegion="FE_trans01" SourceTime="399.999969" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="FE_region" TargetRegion="FE_trans02" SourceTime="399.999969" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="OF_found_card_region" SourceTime="150" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="OF_time_out_region" SourceTime="350" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="OF_Apu_Oasis_region" SourceTime="500" SourceStart="0" TargetTime="500" TargetStart="0" />
+	<FadeTransition SourceRegion="OF_Apu_Oasis_region" TargetRegion="anything" SourceTime="1000" SourceStart="0" TargetTime="350" TargetStart="0" />
+	<FadeTransition SourceRegion="OF_explore_region" TargetRegion="anything" SourceTime="250" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="KwikEmart_region" SourceTime="0" SourceStart="0" TargetTime="3000" TargetStart="0" />
+	<FadeTransition SourceRegion="KwikEmart_region" TargetRegion="anything" SourceTime="1000" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Entering_Building_region" SourceTime="150" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Level_Intro_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="Level_Intro_region" TargetRegion="anything" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Sunday_Drive_Sus_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="Store_region" TargetRegion="anything" SourceTime="850" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="anything" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M0_End_Pos_region" SourceTime="25" SourceStart="247.933868" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M1_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M1_end_Neg_region" SourceTime="5" SourceStart="573.248352" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M1_end_Sus_region" SourceTime="5" SourceStart="573.248352" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M2_end_Pos_region" SourceTime="5" SourceStart="191.0828" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M2_end_Neg_region" SourceTime="5" SourceStart="382.1656" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M2_end_Sus_region" SourceTime="150" SourceStart="191.0828" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M2_drama_region" SourceTime="5" SourceStart="764.3312" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>3</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M3_main_region" TargetRegion="M3_drama_region" SourceTime="5" SourceStart="705.8823" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M3_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M3_end_Neg_region" SourceTime="5" SourceStart="352.941162" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M3_end_Sus_region" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>2</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M4_Main_region" TargetRegion="M4_10sec_region" SourceTime="25" SourceStart="479.999969" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M4_Main_region" TargetRegion="M4_end_Pos_region" SourceTime="0" SourceStart="959.999939" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M4_10sec_region" TargetRegion="M4_end_Pos_region" SourceTime="0" SourceStart="959.999939" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M4_end_Neg_region" SourceTime="0" SourceStart="0.5" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M5_main_region" TargetRegion="M5_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M5_main_region" TargetRegion="M5_end_Neg_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M5_main_region" TargetRegion="M5_end_Sus_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M6_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M6_end_Neg_region" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M6_end_Sus_region" SourceTime="5" SourceStart="0" TargetTime="5" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M7_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M7_end_Neg_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="M7_end_Sus_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="M7_main_region" TargetRegion="M7_drama_region" SourceTime="5" SourceStart="705.8823" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="Bonus_end_Pos_region" SourceTime="5" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="Bonus_end_Neg_region" SourceTime="5" SourceStart="573.248352" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="Bonus_end_Sus_region" SourceTime="5" SourceStart="573.248352" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="win_street_race1_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="lose_street_race1_region" SourceTime="0" SourceStart="176.470581" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="getoutofcar_street_race1_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="win_street_race2_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="lose_street_race2_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="getoutofcar_street_race2_region" SourceTime="0" SourceStart="0" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="anything" TargetRegion="StoneCutters_Tunnel_region" SourceTime="200" SourceStart="0" TargetTime="200" TargetStart="0" />
+	<FadeTransition SourceRegion="StoneCutters_Tunnel_region" TargetRegion="anything" SourceTime="200" SourceStart="0" TargetTime="200" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="StoneCutters_region" SourceTime="700" SourceStart="0" TargetTime="700" TargetStart="0" />
+	<FadeTransition SourceRegion="StoneCutters_region" TargetRegion="anything" SourceTime="4200" SourceStart="0" TargetTime="4200" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Social_Club_region" SourceTime="700" SourceStart="0" TargetTime="700" TargetStart="0" />
+	<FadeTransition SourceRegion="Social_Club_region" TargetRegion="anything" SourceTime="4200" SourceStart="0" TargetTime="4200" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="DuffBeer_region" SourceTime="700" SourceStart="0" TargetTime="700" TargetStart="0" />
+	<FadeTransition SourceRegion="DuffBeer_region" TargetRegion="anything" SourceTime="4200" SourceStart="0" TargetTime="4200" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Hit_Run_region" SourceTime="150" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Hit_Run_Caught_region" SourceTime="150" SourceStart="428.5714" TargetTime="0" TargetStart="0">
+		<Beat>1</Beat>
+		<Beat>2</Beat>
+		<Beat>3</Beat>
+		<Beat>4</Beat>
+	</FadeTransition>
+	<FadeTransition SourceRegion="Hit_Run_region" TargetRegion="anything" SourceTime="7000" SourceStart="0" TargetTime="7000" TargetStart="0" />
+	<FadeTransition SourceRegion="anything" TargetRegion="Credits_region" SourceTime="100" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<FadeTransition SourceRegion="Credits_region" TargetRegion="anything" SourceTime="1500" SourceStart="0" TargetTime="0" TargetStart="0" />
+	<Event Name="movie">
+		<PlayRegionAction Region="movie_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="pause">
+		<PushRegionAction Region="pause_region" TargetRegionResumeType="Resume" CurrentRegionResumeType="Resume" />
+	</Event>
+	<Event Name="unpause">
+		<PopRegionAction Region="pause_region" />
+	</Event>
+	<Event Name="FE">
+		<PlayRegionAction Region="FE_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Loading_screen">
+		<PlayRegionAction Region="FE_trans01" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Newspaper_Spin">
+		<PlayRegionAction Region="FE_trans02" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_explore_mission">
+		<PlayRegionAction Region="OF_explore_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_found_card">
+		<PushRegionAction Region="OF_found_card_region" TargetRegionResumeType="Restart" CurrentRegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_time_out">
+		<PlayRegionAction Region="OF_explore_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Gated_Mission">
+		<PushRegionAction Region="Gated_Mission_region" TargetRegionResumeType="Restart" CurrentRegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_House">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_KiwkEMart">
+		<PlayRegionAction Region="KwikEmart_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_School">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_Moes">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_DMV">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_Android_Dungeon">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_Observatory">
+		<PlayRegionAction Region="Entering_Building_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="OF_Apu_Oasis">
+		<PlayRegionAction Region="OF_Apu_Oasis_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Win_3Street_Races">
+		<PushRegionAction Region="Win_3Street_Races_region" TargetRegionResumeType="Restart" CurrentRegionResumeType="Restart" />
+	</Event>
+	<Event Name="Destroy_Camera_Bonus">
+		<PushRegionAction Region="Destroy_Camera_Bonus_region" TargetRegionResumeType="Restart" CurrentRegionResumeType="Restart" />
+	</Event>
+	<Event Name="Level_Intro">
+		<PlayRegionAction Region="Level_Intro_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Sunday_Drive_start">
+		<PlayRegionAction Region="Sunday_Drive_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="Sunday_Drive_Get_out_of_Car">
+		<PlayRegionAction Region="Sunday_Drive_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Store">
+		<PlayRegionAction Region="Store_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="SuperSprint">
+		<PlayRegionAction Region="SS_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Lose_SuperSprint">
+		<PlayRegionAction Region="Lose_SS_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Win_SuperSprint">
+		<PlayRegionAction Region="Win_SS_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M0_start">
+		<PlayRegionAction Region="Sunday_Drive_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M0_get_out_of_car">
+		<PlayRegionAction Region="Sunday_Drive_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M0_win">
+		<PlayRegionAction Region="M0_End_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M1_start">
+		<PlayRegionAction Region="M1_start_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M1_win">
+		<PlayRegionAction Region="M1_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M1_lose">
+		<PlayRegionAction Region="M1_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M1_get_out_of_car">
+		<PlayRegionAction Region="M1_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M2_start">
+		<PlayRegionAction Region="M2_main_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M2_drama">
+		<PlayRegionAction Region="M2_drama_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M2_win">
+		<PlayRegionAction Region="M2_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M2_lose">
+		<PlayRegionAction Region="M2_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M2_get_out_of_car">
+		<PlayRegionAction Region="M2_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M3_start">
+		<PlayRegionAction Region="M3_main_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M3_drama">
+		<PlayRegionAction Region="M3_drama_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M3_win">
+		<PlayRegionAction Region="M3_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M3_lose">
+		<PlayRegionAction Region="M3_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M3_get_out_of_car">
+		<PlayRegionAction Region="M3_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M4_start">
+		<PlayRegionAction Region="M4_Main_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M4_win">
+		<PlayRegionAction Region="M4_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M4_lose">
+		<PlayRegionAction Region="M4_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M4_10sec_to_go">
+		<PlayRegionAction Region="M4_10sec_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M5_start">
+		<PlayRegionAction Region="M5_main_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M5_win">
+		<PlayRegionAction Region="M5_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M5_lose">
+		<PlayRegionAction Region="M5_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M5_get_out_of_car">
+		<PlayRegionAction Region="M5_main_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M6_start">
+		<PlayRegionAction Region="M6_start_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M6_win">
+		<PlayRegionAction Region="M6_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M6_lose">
+		<PlayRegionAction Region="M6_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M6_get_out_of_car">
+		<PlayRegionAction Region="M6_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M7_start">
+		<PlayRegionAction Region="M7_main_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M7_drama">
+		<PlayRegionAction Region="M7_drama_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="M7_win">
+		<PlayRegionAction Region="M7_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M7_lose">
+		<PlayRegionAction Region="M7_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="M7_get_out_of_car">
+		<PlayRegionAction Region="M7_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Bonus_start">
+		<PlayRegionAction Region="Bonus_main_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="Bonus_win">
+		<PlayRegionAction Region="Bonus_end_Pos_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Bonus_lose">
+		<PlayRegionAction Region="Bonus_end_Neg_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Bonus_get_out_of_car">
+		<PlayRegionAction Region="Bonus_end_Sus_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace01_start">
+		<PlayRegionAction Region="street_race1_start_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="StreetRace01_win">
+		<PlayRegionAction Region="win_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace01_lose">
+		<PlayRegionAction Region="lose_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace01_getoutofcar">
+		<PlayRegionAction Region="getoutofcar_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace02_start">
+		<PlayRegionAction Region="street_race2_start_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="StreetRace02_win">
+		<PlayRegionAction Region="win_street_race2_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace02_lose">
+		<PlayRegionAction Region="lose_street_race2_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace02_getoutofcar">
+		<PlayRegionAction Region="getoutofcar_street_race2_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace03_start">
+		<PlayRegionAction Region="street_race1_start_region" RegionResumeType="Resume" />
+	</Event>
+	<Event Name="StreetRace03_win">
+		<PlayRegionAction Region="win_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace03_lose">
+		<PlayRegionAction Region="lose_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="StreetRace03_getoutofcar">
+		<PlayRegionAction Region="getoutofcar_street_race1_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Enter_StoneCutters_Tunnel">
+		<PushRegionAction Region="StoneCutters_Tunnel_region" TargetRegionResumeType="Resume" CurrentRegionResumeType="Resume" />
+	</Event>
+	<Event Name="Exit_StoneCutters_Tunnel">
+		<PopRegionAction Region="StoneCutters_Tunnel_region" />
+	</Event>
+	<Event Name="StoneCutters">
+		<PlayRegionAction Region="StoneCutters_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Social_Club">
+		<PlayRegionAction Region="Social_Club_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="DuffBeer">
+		<PlayRegionAction Region="DuffBeer_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Hit_and_Run">
+		<PlayRegionAction Region="Hit_Run_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Hit_and_Run_Caught">
+		<PlayRegionAction Region="Hit_Run_Caught_region" RegionResumeType="Restart" />
+	</Event>
+	<Event Name="Credits">
+		<PlayRegionAction Region="Credits_region" RegionResumeType="Restart" />
+	</Event>
+	<RSDFile FileName="Simpsons_Theme" Size="7788348" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="macca" Size="2121495" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="macca_cue01" Size="26422" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="macca_cue02" Size="109856" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="macca_cue03" Size="131351" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="macca_cue04" Size="168443" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="shopping" Size="750881" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="48000" />
+	<RSDFile FileName="L1M1" Size="2413131" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M1_fail" Size="82109" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M1_getoutcar" Size="36194" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M1_win" Size="49635" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M2_drama" Size="1400309" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M2" Size="2188947" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M2_fail" Size="105538" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M2_getoutcar" Size="112944" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M2_win" Size="55184" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1M3" Size="2166827" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="L1BM1" Size="2166827" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Social_Club2" Size="878582" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="FE_trans01" Size="342016" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="FE_trans02" Size="361128" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="FE_trans03" Size="348140" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="NewsPaper_Spin01" Size="366376" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="NewsPaper_Spin02" Size="373468" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_001" Size="750012" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_002" Size="1147392" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_003" Size="1847296" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_005" Size="317952" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_006" Size="440436" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_007" Size="1015808" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_008" Size="630028" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_009" Size="875616" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_010" Size="387072" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_011" Size="1218272" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_012" Size="290268" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_013" Size="876112" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_014" Size="521316" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_015" Size="1304980" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_016" Size="588328" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_017" Size="267696" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_018" Size="454696" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_019" Size="421992" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_020" Size="510320" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_021" Size="572264" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_022" Size="580088" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_023" Size="402940" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_025" Size="914160" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_026" Size="435140" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_027" Size="974848" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_028" Size="763568" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_029" Size="507584" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_030" Size="343556" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_031" Size="255488" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_032" Size="275176" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_033" Size="303480" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_034" Size="590588" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_035" Size="601316" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_036" Size="350748" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_037" Size="1060528" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_038" Size="875244" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_039" Size="796064" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_049" Size="303244" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_050" Size="364024" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_051" Size="549888" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_052" Size="423940" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_054" Size="685144" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_055" Size="334848" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_056" Size="243452" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_057" Size="374072" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_058" Size="244204" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_059" Size="231936" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_060" Size="351260" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_061" Size="531088" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_064" Size="460824" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_065" Size="149504" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_068" Size="625664" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_069" Size="507904" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Horn_triumph" Size="397784" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_040" Size="206832" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_041" Size="221000" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_042" Size="230060" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_043" Size="231128" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_062" Size="202240" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_063" Size="150272" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_044" Size="627044" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Harp_Music04" Size="2401824" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Harp_Music05" Size="2724620" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Generic\Horn_Blast" Size="125652" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Apu\Kwik_E_Mart_Muzak" Size="4684184" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Sunday_Drive_Intro" Size="379804" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Sunday_Drive" Size="16377584" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Sunday_Drive_End_Sus1" Size="338204" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Sunday_Drive_End_Sus3" Size="265964" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Muzak" Size="6583724" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\Casio_tune01" Size="8005548" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\Casio_tune02" Size="9480316" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\Casio_tune07" Size="8270184" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\Casio_tune08" Size="9219540" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\Casio_tune09" Size="7787724" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\win_mini_game" Size="375948" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Minigame\lose_mini_game02" Size="550408" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Sunday_Drive_End_Sus2" Size="317436" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_Pickup" Size="33552" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_Main" Size="13062864" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_End_Pos_b1_3" Size="406528" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_End_Neg_b4" Size="329728" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_End_Sus1_b4" Size="245760" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection02_End_Sus2_b4" Size="228352" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_Main" Size="13647696" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_Drama_Pickup" Size="75348" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_Drama" Size="7046052" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_End_Pos" Size="421888" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_End_Neg" Size="543744" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Gogo_End_Sus" Size="518144" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_Main" Size="4880636" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_Cymbal" Size="75776" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_Drama" Size="4339456" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_End_Pos" Size="283132" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_End_Neg_b" Size="811004" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="In_game01b_End_Sus" Size="243708" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="PowerPlant_Main" Size="14747648" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="PowerPlant_10sec" Size="963072" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="PowerPlant_End_Pos" Size="434172" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="PowerPlant_End_Neg" Size="610300" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Motown_Intro" Size="13643396" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Motown_End_Pos" Size="382976" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Motown_End_Neg" Size="462848" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Motown_End_Sus" Size="446460" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_Pickup_b4" Size="38048" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_Main" Size="10082048" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_Drama" Size="10514048" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_End_Pos" Size="276016" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_End_Neg" Size="411608" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Collection01d_End_Sus_b2" Size="279548" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_Pickup" Size="33896" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_Main" Size="8540400" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_Drama_Pickup_b3" Size="69860" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_Drama" Size="11115460" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_End_Pos_b3" Size="414048" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_End_Neg_b4" Size="400504" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Orch_Chase01_End_Sus" Size="237808" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burning_Rubber" Size="11926780" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Pos1" Size="642684" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Pos2" Size="558868" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Sus1" Size="396004" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Sus2" Size="596324" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Neg1" Size="518508" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Burn_Rubber_End_Neg2" Size="722436" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="StreetRacer_Anthem" Size="12063712" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="StreetRacer_End_Pos2" Size="519260" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="StreetRacer_End_Sus1" Size="227560" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="StreetRacer_End_Neg1" Size="411776" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="StreetRacer_End_Neg2" Size="430292" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Homer_Reward01" Size="359996" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Homer_Reward02" Size="263140" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Homer\Tuba_053" Size="313600" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Vivaldi" Size="11348116" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Social_Club" Size="4132604" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Stone_Cutter_Spoof" Size="1614832" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="DuffBeer_Spoof" Size="1562036" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Hit_Run_Intro" Size="137692" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Hit_Run_Main" Size="6255760" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Hit_Run_End_Neg" Size="462844" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<RSDFile FileName="Land_of_Choc_Main" Size="14110400" AudioFormatEncoding="PCM" AudioFormatChannels="2" AudioFormatBitResolution="16" AudioFormatSamplingRate="24000" />
+	<Stream Name="Simpsons_Theme" RSDFile="Simpsons_Theme" Streamed="true" TempoTrack="172 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="macca" RSDFile="macca" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="macca_cue01" RSDFile="macca_cue01" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="macca_cue02" RSDFile="macca_cue02" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="macca_cue03" RSDFile="macca_cue03" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="macca_cue04" RSDFile="macca_cue04" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="shopping" RSDFile="shopping" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Social_Club2" RSDFile="Social_Club2" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M1" RSDFile="L1M1" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M2" RSDFile="L1M2" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M2_drama" RSDFile="L1M2_drama" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M2_fail" RSDFile="L1M2_fail" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M2_getoutcar" RSDFile="L1M2_getoutcar" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M2_win" RSDFile="L1M2_win" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M3" RSDFile="L1M3" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1BM1" RSDFile="L1BM1" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M1_fail" RSDFile="L1M1_fail" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M1_getoutcar" RSDFile="L1M1_getoutcar" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="L1M1_win" RSDFile="L1M1_win" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="FE_trans01" RSDFile="FE_trans01" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="FE_trans02" RSDFile="FE_trans02" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="FE_trans03" RSDFile="FE_trans03" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="FE_trans04" RSDFile="NewsPaper_Spin01" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="FE_trans05" RSDFile="NewsPaper_Spin02" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_001" RSDFile="Homer\Tuba_001" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_002" RSDFile="Homer\Tuba_002" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_003" RSDFile="Homer\Tuba_003" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_004" RSDFile="Homer\Tuba_003" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_005" RSDFile="Homer\Tuba_005" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_006" RSDFile="Homer\Tuba_006" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_007" RSDFile="Homer\Tuba_007" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_008" RSDFile="Homer\Tuba_008" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_009" RSDFile="Homer\Tuba_009" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_010" RSDFile="Homer\Tuba_010" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_011" RSDFile="Homer\Tuba_011" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_012" RSDFile="Homer\Tuba_012" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_013" RSDFile="Homer\Tuba_013" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_014" RSDFile="Homer\Tuba_014" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_015" RSDFile="Homer\Tuba_015" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_016" RSDFile="Homer\Tuba_016" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_017" RSDFile="Homer\Tuba_017" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_018" RSDFile="Homer\Tuba_018" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_019" RSDFile="Homer\Tuba_019" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_020" RSDFile="Homer\Tuba_020" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_021" RSDFile="Homer\Tuba_021" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_022" RSDFile="Homer\Tuba_022" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_023" RSDFile="Homer\Tuba_023" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_025" RSDFile="Homer\Tuba_025" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_026" RSDFile="Homer\Tuba_026" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_027" RSDFile="Homer\Tuba_027" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_028" RSDFile="Homer\Tuba_028" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_029" RSDFile="Homer\Tuba_029" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_030" RSDFile="Homer\Tuba_030" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_031" RSDFile="Homer\Tuba_031" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_032" RSDFile="Homer\Tuba_032" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_033" RSDFile="Homer\Tuba_033" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_034" RSDFile="Homer\Tuba_034" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_035" RSDFile="Homer\Tuba_035" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_036" RSDFile="Homer\Tuba_036" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_037" RSDFile="Homer\Tuba_037" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_038" RSDFile="Homer\Tuba_038" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_039" RSDFile="Homer\Tuba_039" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_049" RSDFile="Homer\Tuba_049" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_050" RSDFile="Homer\Tuba_050" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_051" RSDFile="Homer\Tuba_051" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_052" RSDFile="Homer\Tuba_052" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_054" RSDFile="Homer\Tuba_054" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_055" RSDFile="Homer\Tuba_055" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_056" RSDFile="Homer\Tuba_056" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_057" RSDFile="Homer\Tuba_057" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_058" RSDFile="Homer\Tuba_058" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_059" RSDFile="Homer\Tuba_059" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_060" RSDFile="Homer\Tuba_060" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_061" RSDFile="Homer\Tuba_061" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_064" RSDFile="Homer\Tuba_064" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_065" RSDFile="Homer\Tuba_065" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_068" RSDFile="Homer\Tuba_068" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_069" RSDFile="Homer\Tuba_069" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Horn_triumph" RSDFile="Horn_triumph" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_040" RSDFile="Homer\Tuba_040" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_041" RSDFile="Homer\Tuba_041" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_042" RSDFile="Homer\Tuba_042" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_043" RSDFile="Homer\Tuba_043" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_062" RSDFile="Homer\Tuba_062" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_063" RSDFile="Homer\Tuba_063" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_044" RSDFile="Homer\Tuba_044" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Harp_Music04" RSDFile="Harp_Music04" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Harp_Music05" RSDFile="Harp_Music05" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Horn_Blast" RSDFile="Generic\Horn_Blast" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="KwikEmart" RSDFile="Apu\Kwik_E_Mart_Muzak" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_056" RSDFile="Homer\Tuba_056" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_058" RSDFile="Homer\Tuba_058" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_059" RSDFile="Homer\Tuba_059" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_060" RSDFile="Homer\Tuba_060" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_061" RSDFile="Homer\Tuba_061" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Sunday_Drive_Intro" RSDFile="Sunday_Drive_Intro" Streamed="true" TempoTrack="121 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Sunday_Drive" RSDFile="Sunday_Drive" Streamed="true" TempoTrack="121 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Sunday_Drive_End_Sus1" RSDFile="Sunday_Drive_End_Sus1" Streamed="true" TempoTrack="121 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Sunday_Drive_End_Sus3" RSDFile="Sunday_Drive_End_Sus3" Streamed="true" TempoTrack="121 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Muzak" RSDFile="Muzak" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Casio_tune01" RSDFile="Minigame\Casio_tune01" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Casio_tune02" RSDFile="Minigame\Casio_tune02" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Casio_tune07" RSDFile="Minigame\Casio_tune07" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Casio_tune08" RSDFile="Minigame\Casio_tune08" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Casio_tune09" RSDFile="Minigame\Casio_tune09" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="win_mini_game" RSDFile="Minigame\win_mini_game" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="lose_mini_game02" RSDFile="Minigame\lose_mini_game02" Streamed="true" TempoTrack="75 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="M0_End_Pos" RSDFile="Sunday_Drive_End_Sus2" Streamed="true" TempoTrack="121 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_Pickup" RSDFile="Collection02_Pickup" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_Main" RSDFile="Collection02_Main" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Pos" RSDFile="Collection02_End_Pos_b1_3" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Neg" RSDFile="Collection02_End_Neg_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Sus1" RSDFile="Collection02_End_Sus1_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Sus2" RSDFile="Collection02_End_Sus2_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_Main" RSDFile="Gogo_Main" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_Drama_Pickup" RSDFile="Gogo_Drama_Pickup" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_Drama" RSDFile="Gogo_Drama" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_End_Pos" RSDFile="Gogo_End_Pos" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_End_Neg" RSDFile="Gogo_End_Neg" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Gogo_End_Sus" RSDFile="Gogo_End_Sus" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_Main" RSDFile="In_game01b_Main" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_Cymbal" RSDFile="In_game01b_Cymbal" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_Drama" RSDFile="In_game01b_Drama" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_End_Pos" RSDFile="In_game01b_End_Pos" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_End_Neg_b" RSDFile="In_game01b_End_Neg_b" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="In_game01b_End_Sus" RSDFile="In_game01b_End_Sus" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="PowerPlant_Main" RSDFile="PowerPlant_Main" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="PowerPlant_10sec" RSDFile="PowerPlant_10sec" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="PowerPlant_End_Pos" RSDFile="PowerPlant_End_Pos" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="PowerPlant_End_Neg" RSDFile="PowerPlant_End_Neg" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="M5_Intro" RSDFile="Motown_Intro" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="M5_End_Pos" RSDFile="Motown_End_Pos" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="M5_End_Neg" RSDFile="Motown_End_Neg" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="M5_End_Sus" RSDFile="Motown_End_Sus" Streamed="true" TempoTrack="125 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_Pickup" RSDFile="Collection01d_Pickup_b4" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_Main" RSDFile="Collection01d_Main" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_Drama" RSDFile="Collection01d_Drama" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_End_Pos" RSDFile="Collection01d_End_Pos" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_End_Neg" RSDFile="Collection01d_End_Neg" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection01d_End_Sus" RSDFile="Collection01d_End_Sus_b2" Streamed="true" TempoTrack="160 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_Pickup" RSDFile="Orch_Chase01_Pickup" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_Main" RSDFile="Orch_Chase01_Main" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_Drama_Pickup" RSDFile="Orch_Chase01_Drama_Pickup_b3" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_Drama" RSDFile="Orch_Chase01_Drama" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_End_Pos" RSDFile="Orch_Chase01_End_Pos_b3" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_End_Neg" RSDFile="Orch_Chase01_End_Neg_b4" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Orch_Chase01_End_Sus" RSDFile="Orch_Chase01_End_Sus" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_Pickup" RSDFile="Collection02_Pickup" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_Main" RSDFile="Collection02_Main" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Pos" RSDFile="Collection02_End_Pos_b1_3" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Neg" RSDFile="Collection02_End_Neg_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Sus1" RSDFile="Collection02_End_Sus1_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Collection02_End_Sus2" RSDFile="Collection02_End_Sus2_b4" Streamed="true" TempoTrack="157 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber" RSDFile="Burning_Rubber" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Pos1" RSDFile="Burn_Rubber_End_Pos1" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Pos2" RSDFile="Burn_Rubber_End_Pos2" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Sus1" RSDFile="Burn_Rubber_End_Sus1" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Sus2" RSDFile="Burn_Rubber_End_Sus2" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Neg1" RSDFile="Burn_Rubber_End_Neg1" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Burning_Rubber_End_Neg2" RSDFile="Burn_Rubber_End_Neg2" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="StreetRacer_Anthem" RSDFile="StreetRacer_Anthem" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="StreetRacer_End_Pos2" RSDFile="StreetRacer_End_Pos2" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="StreetRacer_End_Sus1" RSDFile="StreetRacer_End_Sus1" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="StreetRacer_End_Neg1" RSDFile="StreetRacer_End_Neg1" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="StreetRacer_End_Neg2" RSDFile="StreetRacer_End_Neg2" Streamed="true" TempoTrack="170 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Homer_Reward01" RSDFile="Homer\Homer_Reward01" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Homer_Reward02" RSDFile="Homer\Homer_Reward02" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Tuba_053" RSDFile="Homer\Tuba_053" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Vivaldi" RSDFile="Vivaldi" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Social_Club" RSDFile="Social_Club" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Stone_Cutter_Spoof" RSDFile="Stone_Cutter_Spoof" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="DuffBeer_Spoof" RSDFile="DuffBeer_Spoof" Streamed="true" TempoTrack="100 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Hit_Run_Intro" RSDFile="Hit_Run_Intro" Streamed="true" TempoTrack="140 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Hit_Run_Main" RSDFile="Hit_Run_Main" Streamed="true" TempoTrack="140 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Hit_Run_End_Neg" RSDFile="Hit_Run_End_Neg" Streamed="true" TempoTrack="140 4/4" TempoTrackStartBeat="1" />
+	<Stream Name="Land_of_Choc_Main" RSDFile="Land_of_Choc_Main" Streamed="true" TempoTrack="172 4/4" TempoTrackStartBeat="1" />
+	<Region Name="silent_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<SilenceEvent Time="1000" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="movie_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<SilenceEvent Time="1000" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="pause_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<SilenceEvent Time="1000" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="FE_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Simpsons_Theme" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="FE_trans01" Volume="1">
+		<Layer Name="l" Constant="true" Volume="0.8">
+			<LogicOrEvent>
+				<StreamEvent Name="FE_trans01" />
+				<StreamEvent Name="FE_trans02" />
+				<StreamEvent Name="FE_trans03" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="FE_trans02" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="FE_trans04" />
+				<StreamEvent Name="FE_trans05" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<LogicRepeatEvent MinTimes="2" MaxTimes="3">
+					<SilenceEvent Time="2000" />
+					<SilenceEvent Time="3000" />
+				</LogicRepeatEvent>
+				<LogicOrEvent>
+					<StreamEvent Name="macca_cue01" />
+					<StreamEvent Name="macca_cue02" />
+					<StreamEvent Name="macca_cue03" />
+					<StreamEvent Name="macca_cue04" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="OF_found_card_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="Tuba_040" />
+				<StreamEvent Name="Tuba_041" />
+				<StreamEvent Name="Tuba_042" />
+				<StreamEvent Name="Tuba_043" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="OF_time_out_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<LogicOrEvent>
+					<StreamEvent Name="Tuba_044" />
+					<StreamEvent Name="Tuba_062" />
+					<StreamEvent Name="Tuba_063" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="OF_Apu_Oasis_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<LogicOrEvent>
+					<StreamEvent Name="Harp_Music04" />
+					<StreamEvent Name="Harp_Music05" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Win_3Street_Races_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<LogicOrEvent>
+					<StreamEvent Name="Horn_triumph" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Level_Completed_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<LogicOrEvent>
+					<StreamEvent Name="Horn_triumph" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Destroy_Camera_Bonus_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<LogicOrEvent>
+					<StreamEvent Name="Horn_triumph" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Gated_Mission_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Horn_Blast" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="KwikEmart_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="KwikEmart" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Entering_Building_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="Tuba_005" />
+				<StreamEvent Name="Tuba_012" />
+			</LogicOrEvent>
+			<LogicRepeatEvent>
+				<SilenceEvent Time="1000" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Level_Intro_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="macca_cue01" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="Sunday_Drive_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<StreamEvent Name="macca" />
+			<LogicRepeatEvent>
+				<StreamEvent Name="macca" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Sunday_Drive_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="macca_cue01" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="Store_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="shopping" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="SS_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<LogicOrEvent>
+					<StreamEvent Name="Casio_tune01" />
+					<StreamEvent Name="Casio_tune02" />
+					<StreamEvent Name="Casio_tune07" />
+					<StreamEvent Name="Casio_tune08" />
+					<StreamEvent Name="Casio_tune09" />
+				</LogicOrEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Win_SS_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="win_mini_game" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Lose_SS_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="lose_mini_game02" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M0_End_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="M0_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M1_start_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="L1M1" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M1_drama_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Social_Club2" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M1_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="L1M1_win" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M1_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="L1M1_fail" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M1_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="L1M1_getoutcar" />
+				<StreamEvent Name="L1M1_win" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="M2_main_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="L1M2" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M2_drama_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="L1M2_drama" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M2_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="L1M2_win" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M2_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="L1M2_fail" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M2_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="L1M2_getoutcar" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M3_main_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="In_game01b_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M3_drama_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+				<LogicRepeatEvent>
+					<StreamEvent Name="Social_Club2" />
+				</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M3_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="In_game01b_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M3_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="In_game01b_End_Neg_b" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M3_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="In_game01b_End_Sus" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M4_Main_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="PowerPlant_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M4_10sec_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="PowerPlant_10sec" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M4_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="PowerPlant_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M4_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="PowerPlant_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M5_main_region" Volume="1">
+		<Layer Name="music" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="M5_Intro" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M5_end_Pos_region" Volume="1">
+		<Layer Name="music" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="M5_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M5_end_Neg_region" Volume="1">
+		<Layer Name="music" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="M5_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M5_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="music" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="M5_End_Sus" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M6_start_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<StreamEvent Name="Collection01d_Pickup" />
+			<LogicRepeatEvent>
+				<StreamEvent Name="Collection01d_Main" />
+				<StreamEvent Name="Collection01d_Drama" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M6_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Collection01d_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M6_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Collection01d_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M6_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Collection01d_End_Sus" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M7_main_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<StreamEvent Name="Orch_Chase01_Pickup" />
+			<LogicRepeatEvent>
+				<StreamEvent Name="Orch_Chase01_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M7_drama_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<StreamEvent Name="Orch_Chase01_Drama_Pickup" />
+			<LogicRepeatEvent>
+				<StreamEvent Name="Orch_Chase01_Drama" />
+				<StreamEvent Name="Orch_Chase01_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M7_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Orch_Chase01_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M7_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Orch_Chase01_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="M7_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Orch_Chase01_End_Sus" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Bonus_main_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Collection02_Pickup" />
+				<LogicRepeatEvent>
+					<StreamEvent Name="Collection02_Main" />
+				</LogicRepeatEvent>
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Bonus_end_Pos_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Collection02_End_Pos" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Bonus_end_Neg_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Collection02_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Bonus_end_Sus_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="Collection02_End_Sus1" />
+				<StreamEvent Name="Collection02_End_Sus2" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="street_race1_start_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Burning_Rubber" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="win_street_race1_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="0.85">
+			<LogicOrEvent>
+				<StreamEvent Name="Burning_Rubber_End_Pos1" />
+				<StreamEvent Name="Burning_Rubber_End_Pos2" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="lose_street_race1_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="0.85">
+			<LogicOrEvent>
+				<StreamEvent Name="Burning_Rubber_End_Neg1" />
+				<StreamEvent Name="Burning_Rubber_End_Neg2" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="getoutofcar_street_race1_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="0.85">
+			<LogicOrEvent>
+				<StreamEvent Name="Burning_Rubber_End_Sus1" />
+				<StreamEvent Name="Burning_Rubber_End_Sus2" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="street_race2_start_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="StreetRacer_Anthem" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="win_street_race2_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="StreetRacer_End_Pos2" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="lose_street_race2_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicOrEvent>
+				<StreamEvent Name="StreetRacer_End_Neg1" />
+				<StreamEvent Name="StreetRacer_End_Neg2" />
+			</LogicOrEvent>
+		</Layer>
+	</Region>
+	<Region Name="getoutofcar_street_race2_region" ExitRegion="OF_explore_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="StreetRacer_End_Sus1" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="StoneCutters_Tunnel_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Vivaldi" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Social_Club_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Social_Club2" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="StoneCutters_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Stone_Cutter_Spoof" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="DuffBeer_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="DuffBeer_Spoof" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Hit_Run_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicAndEvent>
+				<StreamEvent Name="Hit_Run_Intro" />
+			</LogicAndEvent>
+			<LogicRepeatEvent>
+				<StreamEvent Name="Hit_Run_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Hit_Run_Caught_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="0.8">
+			<LogicRepeatEvent Times="1">
+				<StreamEvent Name="Hit_Run_End_Neg" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+	<Region Name="Credits_region" Volume="1">
+		<Layer Name="l" Constant="true" Volume="1">
+			<LogicRepeatEvent>
+				<StreamEvent Name="Land_of_Choc_Main" />
+			</LogicRepeatEvent>
+		</Layer>
+	</Region>
+</Composition>

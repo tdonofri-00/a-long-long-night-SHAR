@@ -123,8 +123,8 @@ Game.SetDurationTime(8)
 -- for some reason if I use anything other then "chase" this stage crashes the game
 -- this causes the AI to not follow the same path 100% of the time
 -- this is really freaking annoying lol
-Game.AddStageVehicle("cLimo","m2_limocam","chase","Missions\\level01\\M2camera.con","mobstr")
-Game.AddStageVehicle("cNerd","m2_nerdcam","chase","Missions\\level01\\M2camera.con","male2")
+Game.AddStageVehicle("cLimo","m2_limocam","chase","Missions\\level01\\M2camera.con","mobstr") -- <---------- Does anything other than "chase" work without crashing the game?
+Game.AddStageVehicle("cNerd","m2_nerdcam","chase","Missions\\level01\\M2camera.con","male2") -- <---------- Does anything other than "chase" work without crashing the game?
 Game.CloseObjective()
 Game.StageStartMusicEvent("M2_drama")
 Game.SetStageMusicAlwaysOn()

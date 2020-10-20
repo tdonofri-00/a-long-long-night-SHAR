@@ -1,12 +1,10 @@
--- TODO
--- * Find solution for cinematics CHASE car type
-
 Game.SelectMission("m2")
 
-Game.SetMissionResetPlayerInCar("m2_carstart")
+Game.SetMissionResetPlayerOutCar("m2_bartstart","m2_carstart")
 Game.SetDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
 
 Game.AddStage()
+Game.RESET_TO_HERE()
 Game.SetStageMessageIndex(12)
 Game.AddObjective("getin")
 Game.SetObjTargetVehicle("current")
@@ -19,13 +17,12 @@ end
 Game.CloseStage()
 
 Game.AddStage()
-Game.RESET_TO_HERE()
 Game.SetStageMessageIndex(3)
 Game.SetHUDIcon("w_hotel")
 Game.AddObjective("goto")
 Game.SetDestination("m2_hotel","carsphere")
 Game.RemoveNPC("npd")
-Game.AddStageVehicle("cLimo","m2_limostart","NULL","Missions\\level01\\M2follow.con","mobstr")
+Game.AddStageVehicle("cLimo","m2_limostart","NULL","Missions\\level07\\M2chase.con","mobstr")
 Game.CloseObjective()
 if Mode.IsNormal then
 Game.SetStageTime(35)
@@ -71,6 +68,7 @@ Game.SetStageMessageIndex(4)
 Game.SetHUDIcon("w_limo")
 Game.AddObjective("goto")
 Game.SetDestination("m2_steal","triggersphere")
+Game.RemoveNPC("npd")
 Game.MustActionTrigger()
 Game.SetCollectibleEffect("none")
 Game.SetFadeOut(0.1)
@@ -96,15 +94,12 @@ Game.SetHUDIcon("w_park")
 Game.AddObjective("goto")
 Game.SetDestination("m2_park","carsphere")
 Game.ActivateVehicle("cLimo","NULL","chase")
+Game.TurnGotoDialogOff()
 Game.SetCollectibleEffect("none")
 Game.SetFadeOut(0.1)
 Game.CloseObjective()
 Game.AddCondition("followdistance")
-if Mode.IsNormal then
-Game.SetFollowDistances(0, 150)
-else
-Game.SetFollowDistances(0, 100)
-end
+Game.SetFollowDistances(0, 80)
 Game.SetCondTargetVehicle("cLimo")
 Game.CloseCondition()
 Game.AddCondition("outofvehicle")
@@ -112,21 +107,41 @@ Game.SetCondTime( 1000 )
 Game.CloseCondition()
 Game.CloseStage()
 
+Game.AddStage() -- teleports the player from camera to playable stage
+--Game.DisableTrigger("some_camera_locator")
+Game.AddObjective("timer")
+Game.SetStageAllowMissionCancel(0)
+Game.DisableHitAndRun()
+Game.StayInBlack()
+Game.SetDurationTime(0.1)
+Game.AddStageCharacter("bart", "spawn_player_to_cam_here", "", "current", "m2_car")
+Game.CloseObjective()
+Game.StageStartMusicEvent("M2_drama")
+Game.SetStageMusicAlwaysOn()
+Game.CloseStage()
+
 Game.AddStage(0) -- AAAAAAAAAAA CINEMATICS
+Game.CHECKPOINT_HERE()
+Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
+Game.SetCheckpointResetPlayerOutCar( "m2_bart_escape", "m2_carstart" )
+Game.SetStageAllowMissionCancel(0)
 Game.AddStageCharacter("bart", "spawn_player_to_cam_here", "", "current", "m2_car")
 Game.SetMaxTraffic(0)
-Game.AddStageWaypoint("m2_camwp_1")
-Game.AddStageWaypoint("m2_camwp_2")
-Game.AddStageWaypoint("m2_camwp_3")
+Game.AddStageWaypoint("m2_wp_1")
+Game.AddStageWaypoint("m2_wp_2")
+Game.AddStageWaypoint("m2_wp_3")
+Game.AddStageWaypoint("m2_wp_4")
+Game.AddStageWaypoint("m2_wp_5")
 Game.AddObjective("timer")
-Game.SetDurationTime(8)
+Game.AddStageVehicle("cLimo2","m2_limocam","evade","Missions\\level04\\M7Evade.con","mobstr") -- <---------- Does anything other than "chase" work without crashing the game?
+Game.AddStageVehicle("cNerd","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","male2")
+Game.SetDurationTime(7.5)
+Game.SetFadeOut(0.1)
 -- for some reason if I use anything other then "chase" this stage crashes the game
 -- this causes the AI to not follow the same path 100% of the time
 -- this is really freaking annoying lol
-Game.AddStageVehicle("cLimo","m2_limocam","chase","Missions\\level01\\M2camera.con","mobstr") -- <---------- Does anything other than "chase" work without crashing the game?
-Game.AddStageVehicle("cNerd","m2_nerdcam","chase","Missions\\level01\\M2camera.con","male2") -- <---------- Does anything other than "chase" work without crashing the game?
 Game.CloseObjective()
-Game.StageStartMusicEvent("M2_drama")
+--Game.StageStartMusicEvent("M2_drama")
 Game.SetStageMusicAlwaysOn()
 Game.CloseStage()
 
@@ -140,6 +155,7 @@ Game.SetStageMusicAlwaysOn()
 Game.CloseStage()
 
 Game.AddStage()
+Game.SetIrisWipe(3.5)
 Game.CHECKPOINT_HERE()
 -- Obligatory checkpoint because players new to this stage have only trial and error to find inside/outside triggers
 -- I'd prefer not to make players rage like Donut Mod Hellfish lmao
@@ -168,30 +184,23 @@ end
 Game.CloseObjective()
 Game.AddCondition("insidetrigger")
 Game.SetCondTrigger("m2_crowd1")
-if Mode.IsNormal then
-Game.SetCondThreshold(3.5)
-else
-Game.SetCondThreshold(2)
-end
+Game.SetCondThreshold(3)
 Game.SetCondMessageIndex(9)
-if Mode.IsNormal then
-Game.SetCondDecay(6, 6)
-else
-Game.SetCondDecay(5, 4)
-end
+Game.SetCondDecay(3, 2)
 Game.SetCondSound("gag_clnk","enter_trigger")
 Game.SetCondSound("countdown_beeps","inside_trigger",1,5)
 Game.SetCondSound("d_bcrash_brt_02","exit_trigger")
 Game.SetStageMusicAlwaysOn()
 Game.CloseStage()
 
-Game.AddStage() -- This is just to teleport the current car to the player
--- It really wouldn't make sense that you're sneaking out of the park if your car is right next to ya
--- Immersion in SHAR modding is kinda taboo lmao
+Game.AddStage()
 Game.DisableTrigger("some_camera_locator")
 Game.AddObjective("timer")
 Game.SetDurationTime(1)
-Game.AddStageCharacter("bart", "m2_bart_free", "", "current", "m2_car")
+Game.AddStageCharacter("bart", "m2_bart_free", "", "current", "m2_car") -- This is just to teleport the current car to the player
+-- It really wouldn't make sense that you're sneaking out of the park if your car is right next to ya
+-- Immersion in SHAR modding is kinda taboo lmao
+Game.StayInBlack()
 Game.CloseObjective()
 Game.SetStageMusicAlwaysOn()
 Game.CloseStage()

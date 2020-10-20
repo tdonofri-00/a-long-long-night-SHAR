@@ -1,6 +1,6 @@
 Game.SelectMission("m2")
 
-Game.SetMissionResetPlayerOutCar("m2_bartstart","m2_carstart")
+Game.SetMissionResetPlayerOutCar("m2_bartstart","m2_carstart_sd")
 Game.SetDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
 
 Game.AddStage()
@@ -108,8 +108,10 @@ Game.CloseCondition()
 Game.CloseStage()
 
 Game.AddStage() -- teleports the player from camera to playable stage
+--Game.DisableTrigger("some_camera_locator")
 Game.AddObjective("timer")
 Game.SetStageAllowMissionCancel(0)
+--Game.DisableHitAndRun()
 Game.StayInBlack()
 Game.SetDurationTime(0.1)
 Game.AddStageCharacter("bart", "spawn_player_to_cam_here", "", "current", "m2_car")
@@ -133,10 +135,13 @@ Game.AddStageWaypoint("m2_wp_3")
 Game.AddStageWaypoint("m2_wp_4")
 Game.AddStageWaypoint("m2_wp_5")
 Game.AddObjective("timer")
-Game.AddStageVehicle("cLimo2","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","mobstr")
+Game.AddStageVehicle("cLimo2","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","mobstr") -- <---------- Does anything other than "chase" work without crashing the game?
 Game.AddStageVehicle("cNerd","m2_limocam","evade","Missions\\level04\\M7Evade.con","male2")
 Game.SetDurationTime(7.5)
 Game.SetFadeOut(0.1)
+-- for some reason if I use anything other then "chase" this stage crashes the game
+-- this causes the AI to not follow the same path 100% of the time
+-- this is really freaking annoying lol
 Game.CloseObjective()
 Game.StageStartMusicEvent("M2_drama")
 Game.SetStageMusicAlwaysOn()
@@ -153,6 +158,9 @@ Game.CloseStage()
 
 Game.AddStage()
 Game.SetIrisWipe(3.5)
+--Game.CHECKPOINT_HERE()
+--Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
+--Game.SetCheckpointResetPlayerOutCar( "m2_bart_escape", "m2_carstart" )
 Game.DisableTrigger("some_camera_locator")
 Game.AddStageCharacter("bart", "m2_bart_escape", "", "current", "m2_carstart")
 Game.SetHUDIcon("w_park") -- I need to make a new icon. this one is just plain bad

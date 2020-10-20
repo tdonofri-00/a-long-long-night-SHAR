@@ -1,9 +1,11 @@
 --Mission P3D
 Game.LoadP3DFile("art\\missions\\level01\\m1.p3d")
-
+--Mission Props/Extra Shit
+Game.LoadP3DFile("art\\missions\\level01\\m1_cam.p3d")
 --AI Cars
-Game.LoadDisposableCar("art\\cars\\snake_v.p3d","snake_v","AI") 
-Game.LoadDisposableCar("art\\cars\\cPolic2.p3d","cPolic2","AI") 
+Game.LoadDisposableCar("art\\cars\\snake_v.p3d","snake_v","AI")
+Game.LoadDisposableCar("art\\cars\\cPolic2.p3d","cPolic2","AI")
+Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")
 
 --Mission Props
 Game.LoadP3DFile("art\\missions\\level03\\kmeal.p3d")

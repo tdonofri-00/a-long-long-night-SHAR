@@ -135,13 +135,10 @@ Game.AddStageWaypoint("m2_wp_3")
 Game.AddStageWaypoint("m2_wp_4")
 Game.AddStageWaypoint("m2_wp_5")
 Game.AddObjective("timer")
-Game.AddStageVehicle("cLimo2","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","mobstr") -- <---------- Does anything other than "chase" work without crashing the game?
+Game.AddStageVehicle("cLimo2","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","mobstr")
 Game.AddStageVehicle("cNerd","m2_limocam","evade","Missions\\level04\\M7Evade.con","male2")
 Game.SetDurationTime(7.5)
 Game.SetFadeOut(0.1)
--- for some reason if I use anything other then "chase" this stage crashes the game
--- this causes the AI to not follow the same path 100% of the time
--- this is really freaking annoying lol
 Game.CloseObjective()
 Game.StageStartMusicEvent("M2_drama")
 Game.SetStageMusicAlwaysOn()
@@ -207,7 +204,6 @@ Game.SetStageMusicAlwaysOn()
 Game.CloseStage()
 
 Game.AddStage()
-Game.SetIrisWipe(3.5)
 Game.DisableTrigger("some_camera_locator")
 Game.SetStageMessageIndex(12)
 Game.AddObjective("getin")

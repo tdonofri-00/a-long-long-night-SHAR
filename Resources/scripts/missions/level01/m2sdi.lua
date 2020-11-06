@@ -9,8 +9,7 @@ Game.UsePedGroup(5)
 
 Game.AddStage()
 Game.SetStageMessageIndex(01)
---Game.SetHUDIcon("w_wars")
--- HUD Icon doesn't exist yet
+Game.SetHUDIcon("w_wars")
 Game.AddObjective("goto")
 Game.SetDestination("m2_wars","carsphere")
 Game.CloseObjective()

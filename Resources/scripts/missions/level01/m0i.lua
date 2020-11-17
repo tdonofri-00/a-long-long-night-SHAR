@@ -10,6 +10,7 @@ Game.UsePedGroup(5)
 
 Game.AddStage()
 Game.SetStageMessageIndex(02)
+Game.AddStageCharacter("bart", "m0_bart_loc2", "", "current", "m0_carstart_2")
 Game.AddObjective("getin")
 Game.SetObjTargetVehicle("current")
 Game.CloseObjective()

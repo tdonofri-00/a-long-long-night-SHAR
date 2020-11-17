@@ -40,8 +40,8 @@ Game.ClearAmbientAnimations( "bm1" )
 	
 	Game.AddAmbientPcAnimation( "dialogue_thinking",			"sr2" )
 	Game.AddAmbientPcAnimation( "none",					"sr2" )
-Game.AddNPCCharacterBonusMission("ralph", "npd", "sr3_ralph_sd", "sr3", "checkered", "intro", 0, "checkeredfinish" )
-Game.SetBonusMissionDialoguePos("sr3","sr3_apu","sr3_ralph_sd","sr3_apucar")
+--Game.AddNPCCharacterBonusMission("ralph", "npd", "sr3_ralph_sd", "sr3", "checkered", "intro", 0, "checkeredfinish" )
+--Game.SetBonusMissionDialoguePos("sr3","sr3_apu","sr3_ralph_sd","sr3_apucar")
 	Game.SetConversationCam( 0, "pc_near",				"sr3" )
 	Game.SetConversationCam( 1, "npc_far",				"sr3" )
 	
@@ -119,8 +119,8 @@ Game.SetBonusMissionDialoguePos("bm1","bm1_apu","bm_frink_walk_1","bm1_carstart"
 	
 --Game.AddING PURCHASE POINTS FOR VEHICLES AND SKINS
 --
---Game.AddPurchaseCarReward( "gil", "gil", "npd", "gil_loc", 1.3, "gil_car" )
---Game.AddPurchaseCarNPCWaypoint("gil", "gil_walk1")
+Game.AddPurchaseCarReward( "gil", "gil", "npd", "gil_loc", 1.3, "gil_car" )
+Game.AddPurchaseCarNPCWaypoint("gil", "gil_walk1")
 --Game.AddPurchaseCarReward( "simpson", "homer", "npd", "homer_loc", 1.3, "homer_car" )
 --Game.AddPurchaseCarNPCWaypoint("homer", "homer_walk1")
 

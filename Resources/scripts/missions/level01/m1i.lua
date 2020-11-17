@@ -46,9 +46,12 @@ Game.SetStageMusicAlwaysOn()
 Game.CloseStage()
 
 Game.AddStage(0) -- AAAAAAAAAAA CINEMATICS
+if Mode.IsNormal then
 Game.CHECKPOINT_HERE()
 Game.SetCheckpointDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
 Game.SetCheckpointResetPlayerOutCar("spawn_player_to_cam_here" , "m1_car_loc" )
+end
+Game.SetHUDIcon("w_police")
 Game.SetStageAllowMissionCancel(0)
 Game.SetStageMessageIndex(6)
 Game.SetMaxTraffic(0)
@@ -113,7 +116,7 @@ Game.SetHUDIcon("w_dmv")
 Game.AddObjective("goto")
 Game.SetDestination("m1_dmv","carsphere")
 Game.AddNPC("wiggum", "m1_officer_loc")
-Game.AddStageVehicle("cPolic3","m1_police_loc","NULL","Missions\\level01\\M0chase.con")
+Game.AddStageVehicle("cPolic2","m1_police_loc","NULL","Missions\\level01\\M0chase.con")
 Game.CloseObjective()
 Game.AddCondition("outofvehicle")
 Game.SetCondTime( 10000 )

@@ -6,11 +6,12 @@ Game.AddMission("m4")
 Game.AddMission("m5")
 Game.AddMission("m6")
 Game.AddMission("m7")
-Game.AddBonusMission("sr1")
-Game.AddBonusMission("sr2")
-Game.AddBonusMission("sr3")
-Game.AddBonusMission("gr1")
-Game.AddBonusMission("bm1")
+Game.AddMission("m8")
+Game.AddBonusMission("sr1") -- street race 1 - a time trial
+Game.AddBonusMission("sr2") -- street race 2 - circuit race
+Game.AddBonusMission("sr3") -- street race 3 - waypoint race
+Game.AddBonusMission("gr1") -- street race 4 - waypoint race
+Game.AddBonusMission("bm1") -- bonus mission 1
 
 Game.AddTeleportDest("Town Square", 135.3, 8.0, 44.8, "l5z1.p3d;l5r1.p3d;l5r4.p3d;")
 Game.AddTeleportDest("Moe's", -166, 7.3, 22.7, "l5z2.p3d;l5r1.p3d;l5r2.p3d;")
@@ -51,10 +52,10 @@ Game.LoadDisposableCar( "art\\cars\\bart_v.p3d","bart_v","DEFAULT" )
 -- Traffic vehicle models
 --
 Game.LoadP3DFile( "art\\cars\\huskA.p3d" )
-Game.LoadP3DFile( "art\\cars\\sportsB.p3d" )
-Game.LoadP3DFile( "art\\cars\\cBone.p3d" )
+Game.LoadP3DFile( "art\\cars\\sportsB.p3d" ) -- sportsA
+Game.LoadP3DFile( "art\\cars\\cBone.p3d" ) -- SUVA
 Game.LoadP3DFile( "art\\cars\\ambul.p3d" )
-Game.LoadP3DFile( "art\\cars\\fishtruc.p3d" )
+Game.LoadP3DFile( "art\\cars\\fishtruc.p3d" ) -- pickupA
 
 Game.AddVehicleSelectInfo( "ART\\CARS\\snake_v.p3d", "snake_v", "snake" )
 Game.AddVehicleSelectInfo( "ART\\CARS\\wiggu_v.p3d", "wiggu_v", "wiggum" )
@@ -95,6 +96,7 @@ Game.SuppressDriver("krusty")
 Game.SuppressDriver("wiggum")
 Game.SuppressDriver("snake")
 Game.SuppressDriver("bart")
+--Game.SuppressDriver("frink") --bonus mission character
 Game.SuppressDriver("milhouse")
 Game.SuppressDriver("gil")
 Game.SuppressDriver("ralph")
@@ -102,6 +104,7 @@ Game.SuppressDriver("nelson")
 Game.SuppressDriver("patty")
 Game.SuppressDriver("selma")
 Game.SuppressDriver("barney")
+--Game.SuppressDriver("moe")
 Game.SuppressDriver("jasper")
 Game.SuppressDriver("lenny")
 Game.SuppressDriver("grandpa")

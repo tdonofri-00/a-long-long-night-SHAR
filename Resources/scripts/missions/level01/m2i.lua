@@ -90,6 +90,9 @@ end
 Game.CloseStage()
 
 Game.AddStage()
+--Game.CHECKPOINT_HERE()
+--Game.SetCheckpointDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
+--Game.SetCheckpointResetPlayerInCar( "m2_carstart" )
 Game.SetStageMessageIndex(05)
 Game.SetHUDIcon("w_park")
 Game.AddObjective("goto")

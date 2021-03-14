@@ -47,7 +47,7 @@ Game.LoadP3DFile("art\\missions\\level01\\wasps.p3d")
 
 -- This is the level vehicle, always present
 -- 
-Game.LoadDisposableCar( "art\\cars\\bart_v.p3d","bart_v","DEFAULT" )
+Game.LoadDisposableCar( "art\\cars\\lambo.p3d","lambo","DEFAULT" )
 
 -- Traffic vehicle models
 --

@@ -1,6 +1,6 @@
 Game.EnableTutorialMode( false )
 
-Game.InitLevelPlayerVehicle("bart_v","level1_carstart","DEFAULT")
+Game.InitLevelPlayerVehicle("lambo","level1_carstart","DEFAULT")
 
 Game.AddCharacter("bart","bart")
 

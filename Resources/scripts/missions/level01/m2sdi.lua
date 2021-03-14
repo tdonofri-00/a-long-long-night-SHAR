@@ -5,6 +5,9 @@ Game.SelectMission("m2sd")
 
 Game.SetMissionResetPlayerOutCar("m2_bartstart_sd","m2_carstart_sd")
 Game.SetDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
+Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
+Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
+
 Game.UsePedGroup(5)
 
 Game.AddStage()
@@ -35,9 +38,9 @@ Game.AddNPC("npd","m2_npd_sd")
 Game.AmbientAnimationRandomize( 1, 0 )      -- ( pc=0, npc=1) (nonrandom=0, random=1)
 Game.AmbientAnimationRandomize( 0, 0 )
 Game.SetConversationCam( 0, "npc_far" )
-Game.SetConversationCam( 1, "pc_far" )
+Game.SetConversationCam( 1, "npc_far" )
 Game.SetConversationCam( 2, "npc_far" )
-Game.SetConversationCam( 3, "pc_far" )
+Game.SetConversationCam( 3, "npc_far" )
 Game.SetConversationCam( 4, "npc_far" )
 Game.AddAmbientNpcAnimation( "dialogue_open_arm_hand_gesture" )
 Game.AddAmbientNpcAnimation( "none" )

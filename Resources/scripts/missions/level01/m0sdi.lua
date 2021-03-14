@@ -2,6 +2,8 @@ Game.SelectMission("m0sd")
 
 Game.SetMissionResetPlayerOutCar("level1_bart_start","level1_carstart")
 Game.SetDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d")
+Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
+Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
 
 Game.UsePedGroup(5)
 
@@ -27,16 +29,16 @@ Game.CloseStage()
 
 Game.AddStage(1)
 Game.AddObjective("dialogue")
-Game.SetPresentationBitmap( "art/frontend/dynaload/images/mis01_00.p3d" )
+Game.SetPresentationBitmap( "art/frontend/dynaload/images/mis00_01.p3d" )
 Game.AddNPC("npd","m0_npd_sdcam")
 Game.AmbientAnimationRandomize( 1, 0 )
 Game.AmbientAnimationRandomize( 0, 0 )
 Game.SetConversationCam( 0, "npc_far" )
-Game.SetConversationCam( 1, "pc_far" )
-Game.SetConversationCam( 2, "npc_near" )
-Game.SetConversationCam( 3, "pc_near" )
-Game.SetConversationCam( 4, "npc_near" )
-Game.SetConversationCam( 5, "pc_near" )
+Game.SetConversationCam( 1, "npc_far" )
+Game.SetConversationCam( 2, "npc_far" )
+Game.SetConversationCam( 3, "npc_far" )
+Game.SetConversationCam( 4, "npc_far" )
+Game.SetConversationCam( 5, "npc_far" )
 Game.AddAmbientNpcAnimation( "none" )
 Game.AddAmbientNpcAnimation( "none" )
 Game.AddAmbientNpcAnimation( "none" )

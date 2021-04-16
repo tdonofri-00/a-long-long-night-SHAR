@@ -1,7 +1,7 @@
 Game.SelectMission("m0sd")
 
 	Game.SetMissionResetPlayerOutCar("level1_bart_start","level1_carstart")
-	Game.SetDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d")
+	Game.SetDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
 	Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
 

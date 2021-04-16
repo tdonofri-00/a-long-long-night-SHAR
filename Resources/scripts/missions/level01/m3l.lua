@@ -9,6 +9,7 @@ Game.LoadP3DFile("art\\missions\\generic\\fline.p3d")
 
 -- Hud Icons
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_kburg.p3d" )
+Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_kbur2.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_dmv.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_park.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_moes.p3d" )
@@ -21,9 +22,6 @@ Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\vehicle\\w_race.p3
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\object\\w_pills.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\object\\w_blend.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\object\\w_laser.p3d" )
-
--- Meme
-Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\meme\\w_meme.p3d" ) -- <------------------------------------------------------------------ Placeholder
 
 -- Vehicles
 Game.LoadDisposableCar("art\\cars\\cKlimo.p3d","cKlimo","AI")

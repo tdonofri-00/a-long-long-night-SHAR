@@ -184,11 +184,19 @@ Game.SelectMission("m3")
 		Game.CloseObjective()
 	Game.CloseStage()
 
-	Game.AddStage("locked","car","")
+Output([[
+    AddStage("locked", "car", "");
+]])    --because game.lua doesn't fucking recognize the last two parameters!!!
 		Game.CHECKPOINT_HERE()
 		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
-		Game.SetCheckpointResetPlayerOutCar("m3_bart_talk","m3_bart_carstart")
-		Game.SetStageMessageIndex(9)
+		Game.SetCheckpointResetPlayerOutCar("m3_bart_sd","m3_carstart_sd")
+		Game.SetStageMessageIndex(09)
+		Game.AddObjective("timer")
+			Game.SetDurationTime(1)
+		Game.CloseObjective()
+	Game.CloseStage()
+	
+	Game.AddStage()	-- empty stage because objective text doesn't show after locked stage message.
 		Game.AddObjective("timer")
 			Game.SetDurationTime(0)
 		Game.CloseObjective()
@@ -286,7 +294,7 @@ Game.SelectMission("m3")
 		if Mode.IsNormal then
 		Game.AddCondition("outofvehicle")
 			Game.SetCondTime( 10000 )
-		Game.CloseCondition
+		Game.CloseCondition()
 		Game.SetStageTime(40)
 		else
 		Game.SetStageTime(30)
@@ -399,7 +407,7 @@ Game.SelectMission("m3")
 
 	Game.AddStage("final")
 		Game.StartCountdown("count")
-		Game.AddToCountdownSequence( "o", 100 )
+		Game.AddToCountdownSequence( "o", 400 )
 		Game.AddObjective("timer")
 			Game.SetDurationTime(0.1)
 		Game.CloseObjective()

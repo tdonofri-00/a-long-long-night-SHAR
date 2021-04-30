@@ -198,7 +198,7 @@ Game.SelectMission("m4")
 
 	Game.AddStage() -- 	AN ABSOLUTE LIFETIME OF COMMUNITY SERVICE FOR YOU
 		Game.SetHUDIcon( "w_wig" )
-		Game.SetStageMessageIndex(9)
+		Game.SetStageMessageIndex(10)
 		Game.DisableHitAndRun()
 		Game.AddStageTime(20)
 		Game.ActivateVehicle("cPolic2","NULL","chase")

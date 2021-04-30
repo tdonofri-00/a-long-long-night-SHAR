@@ -65,7 +65,7 @@ Game.SelectMission("m1")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.ShowStageComplete()
+		Game.ShowStageComplete() -- Checkpoint Notification
 	Game.CloseStage()
 
 	Game.AddStage()
@@ -76,7 +76,6 @@ Game.SelectMission("m1")
 		Game.SetHUDIcon("w_yellow")
 		Game.ActivateVehicle("yellow","NULL","target")
 		-- Basic route
-		--Game.AddStageWaypoint("m1_wp_1b")
 		Game.AddStageWaypoint("m1_wp_2b")
 		Game.AddStageWaypoint("m1_wp_3b")
 		Game.AddStageWaypoint("m1_wp_4")
@@ -140,7 +139,7 @@ Game.SelectMission("m1")
 		Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.ShowStageComplete()
+		Game.ShowStageComplete() -- Checkpoint Notification
 	Game.CloseStage()
 
 	Game.AddStage()

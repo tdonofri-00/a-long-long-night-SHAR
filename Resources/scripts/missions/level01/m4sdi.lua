@@ -5,11 +5,18 @@ Game.SelectMission("m4sd")
 
 	Game.UsePedGroup(5)
 
-	Game.AddStage("locked","car","") -- Barriers unloaded notification
-		Game.SetHUDIcon("w_moes")
+Output([[
+    AddStage("locked", "car", "");
+]])    --because game.lua doesn't fucking recognize the last two parameters!!!
 		Game.SetStageMessageIndex(9)
 		Game.AddObjective("timer")
 			Game.SetDurationTime(1)
+		Game.CloseObjective()
+	Game.CloseStage()
+	
+	Game.AddStage()	-- empty stage because objective text doesn't show after locked stage message.
+		Game.AddObjective("timer")
+			Game.SetDurationTime(0)
 		Game.CloseObjective()
 	Game.CloseStage()
 
@@ -22,7 +29,7 @@ Game.SelectMission("m4sd")
 	Game.CloseStage()
 
 	Game.AddStage()
-		Game.RESET_TO_HERE()
+--		Game.RESET_TO_HERE()
 		Game.SetHUDIcon("w_moes")
 		Game.SetStageMessageIndex(2)
 		Game.AddObjective("interior")

@@ -4,6 +4,7 @@ Game.SelectMission("m3")
 	Game.SetDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
 	Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
+	Game.SetPedsEnabled(1)
 
 	Game.UsePedGroup(5)
 
@@ -157,8 +158,10 @@ Game.SelectMission("m3")
 		Game.SetTalkToTarget("krusty", 0, 0)
 		Game.CloseObjective()
 	Game.CloseStage()
-
-	Game.AddStage(1)
+Output([[
+    AddStage("locked", "car", "");
+]])
+		Game.SetStageMessageIndex(9)
 		Game.AddObjective("dialogue")
 			Game.AddNPC("krusty", "m3_krusty_sd")
 			Game.AmbientAnimationRandomize( 1, 0 )
@@ -168,63 +171,46 @@ Game.SelectMission("m3")
 			Game.SetConversationCam( 2, "pc_far" )
 			Game.SetConversationCam( 3, "npc_far" )
 			Game.SetConversationCam( 4, "pc_near" )
-			Game.AddAmbientNpcAnimation( "dialogue_open_arm_hand_gesture" )
-			Game.AddAmbientNpcAnimation( "dialogue_shaking_fist" )
-			Game.AddAmbientNpcAnimation( "dialogue_hands_on_hips" )
+			Game.AddAmbientNpcAnimation( "none" )
+			Game.AddAmbientNpcAnimation( "dialogue_hands_in_air" )
 			Game.AddAmbientNpcAnimation( "none" )
 			Game.AddAmbientNpcAnimation( "dialogue_cross_arms" )
+			Game.AddAmbientPcAnimation( "dialogue_shake_hand_in_air" )
 			Game.AddAmbientPcAnimation( "none" )
-			Game.AddAmbientPcAnimation( "dialogue_no" )
+			Game.AddAmbientPcAnimation( "dialogue_hands_on_hips" )
 			Game.AddAmbientPcAnimation( "none" )
-			Game.AddAmbientPcAnimation( "none" )
-			Game.AddAmbientPcAnimation( "dialogue_hands_in_air" )
 			Game.SetCamBestSide("m3_bestside")
 			Game.SetDialogueInfo("bart","krusty","krusty",0)
 			Game.SetDialoguePositions("m3_bart_talk","m3_krusty_talk","m3_carstart_sd")
 		Game.CloseObjective()
 	Game.CloseStage()
-
-Output([[
-    AddStage("locked", "car", "");
-]])    --because game.lua doesn't fucking recognize the last two parameters!!!
-		Game.CHECKPOINT_HERE()
-		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
-		Game.SetCheckpointResetPlayerOutCar("m3_bart_sd","m3_carstart_sd")
-		Game.SetStageMessageIndex(09)
-		Game.AddObjective("timer")
-			Game.SetDurationTime(1)
-		Game.CloseObjective()
-	Game.CloseStage()
 	
 	Game.AddStage()	-- empty stage because objective text doesn't show after locked stage message.
 		Game.AddObjective("timer")
-			Game.SetDurationTime(0)
+			Game.SetDurationTime(0.5)
 		Game.CloseObjective()
+		Game.ShowStageComplete()
 	Game.CloseStage()
 
-	if Mode.IsNormal then
 	Game.AddStage()
+		Game.CHECKPOINT_HERE()	--what are the odds someone restarts here?
+		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
+		Game.SetCheckpointResetPlayerOutCar("m3_bart_talk", "m3_restart1")
 		Game.SetStageMessageIndex(12)
 		Game.AddObjective("getin")
 			Game.SetObjTargetVehicle("current")
 		Game.CloseObjective()
-		Game.ShowStageComplete() -- Checkpoint Notification
+		if Mode.IsHard then
+			Game.SetStageTime(15)
+			Game.AddCondition("timeout")
+			Game.CloseCondition()
+		end
 	Game.CloseStage()
-	else
-	Game.AddStage()
-		Game.StartCountdown("count")
-		Game.AddToCountdownSequence( "o", 100 )
-		Game.AddObjective("timer")
-			Game.SetDurationTime(0.1)
-		Game.CloseObjective()
-		Game.ShowStageComplete() -- Checkpoint Notification
-	Game.CloseStage()
-	end
 
 	Game.AddStage()
-		Game.CHECKPOINT_HERE()
+		Game.CHECKPOINT_HERE()	--i don't want to hear "thunk thunk" when i restart
 		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
-		Game.SetCheckpointResetPlayerInCar("m3_carstart_sd")
+		Game.SetCheckpointResetPlayerInCar("m3_restart1")
 		Game.SetStageMessageIndex(14)
 		Game.SetHUDIcon("w_park")
 		Game.AddObjective("goto")
@@ -256,7 +242,7 @@ Output([[
 			Game.SetCollectibleEffect("none")
 		Game.CloseObjective()
 		if Mode.IsHard then
-		Game.SetStageTime(10)
+		Game.AddStageTime(10)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		end
@@ -270,7 +256,7 @@ Output([[
 		Game.SetStageMessageIndex(12)
 		Game.SetStageAllowMissionCancel(0)
 		Game.AddObjective("timer")
-			Game.SetDurationTime(3.0)
+			Game.SetDurationTime(3.5)
 			Game.StayInBlack()
 		Game.CloseObjective()
 	Game.CloseStage()
@@ -285,10 +271,12 @@ Output([[
 	end
 
 	Game.AddStage()
-		Game.SetStageMessageIndex(10)
-		Game.SetHUDIcon("w_statio")
+		--Game.SetStageMessageIndex(10)
+		--Game.SetHUDIcon("w_statio")
+		Game.SetStageMessageIndex(03)
+		Game.SetHUDIcon("w_kbur2")
 		Game.AddObjective("goto")
-			Game.SetDestination("m3_kburger","carsphere")
+			Game.SetDestination("m3_kburger_tape","carsphere")
 			Game.RemoveNPC("krusty")
 		Game.CloseObjective()
 		if Mode.IsNormal then
@@ -317,7 +305,7 @@ Output([[
 			Game.SetCollectibleEffect("none")
 		Game.CloseObjective()
 		if Mode.IsHard then
-		Game.SetStageTime(10)
+		Game.AddStageTime(10)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		end
@@ -342,36 +330,52 @@ Output([[
 		Game.SetCheckpointResetPlayerInCar("m3_racestart" )
 		Game.SetHUDIcon( "w_race" )
 		Game.SetStageMessageIndex(17)
-		Game.DisableHitAndRun()
+--		Game.DisableHitAndRun()
 		Game.AddStageCharacter("bart", "", "", "current", "m3_racestart")
 		Game.StartCountdown("count")
 		Game.AddToCountdownSequence( "3", 800 ) -- duration time in milliseconds
 		Game.AddToCountdownSequence( "2", 800 ) -- duration time in milliseconds
-		Game.AddToCountdownSequence( "1", 600 ) -- duration time in milliseconds
+		Game.AddToCountdownSequence( "1", 800 ) -- duration time in milliseconds
 		Game.AddToCountdownSequence( "GO", 400 ) -- duration time in milliseconds
 		Game.NoTrafficForStage()
-		Game.AddStageVehicle(Car2,"m3_raceai_3","race","Missions\\level01\\m3_1st.con","krusty")
+		Game.AddStageVehicle(Car2,"m3_raceai_3","race","Missions\\level01\\m3_race1st.con","krusty")
 		Game.SetVehicleAIParams(Car2, -10, -9)
-		Game.AddStageVehicle(Car,"m3_raceai_2","race","Missions\\level01\\m3_2nd.con","male1")
+		Game.AddStageVehicle(Car,"m3_raceai_2","race","Missions\\level01\\m3_race2nd.con","male1")
 		Game.SetVehicleAIParams(Car, -10, -9)
-		Game.AddStageVehicle(Car3,"m3_raceai_1","race","Missions\\level01\\m3_3rd.con","male4")
+		Game.AddStageVehicle(Car3,"m3_raceai_1","race","Missions\\level01\\m3_race3rd.con","male4")
 		Game.SetVehicleAIParams(Car3, -10, -9)
-		for i= 1,12 do
+		
+		if Mode.IsHard then
+			Game.SetVehicleAIParams(Car, 50, 51)
+			Game.SetVehicleAIParams(Car2, 50, 51)
+			Game.SetVehicleAIParams(Car3, 50, 51)
+		else
+			Game.SetVehicleAIParams(Car, -10, -9)
+			Game.SetVehicleAIParams(Car2, -10, -9)
+			Game.SetVehicleAIParams(Car3, -10, -9)
+		end
+		
+		for i= 1,6 do
 		Game.AddStageWaypoint("m3_navwp_"..i)
 		end
+		
+		--for i, x in pairs({"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
+		
 		Game.AddStageWaypoint( "m3_navwp_final" )
 		Game.AddObjective( "race")
-		Game.AddNPC("krusty", "m3_krusty_sd")
-		for i= 1,13 do
-		Game.AddCollectible("m3_racewp_"..i,"carsphere")
-		end
-		Game.SetCollectibleEffect("wrench_collect")
-		Game.AddCollectible("m3_racewp_final","carsphere")
-		Game.SetCollectibleEffect("wrench_collect")
+			Game.AddNPC("krusty", "m3_krusty_sd")
+			for i= 1,13 do
+			Game.AddCollectible("m3_racewp_"..i,"carsphere")
+			end
+			Game.AddCollectible("m3_racewp_final","carsphere")
+			Game.SetCollectibleEffect("wrench_collect")
 		Game.CloseObjective()
+		--[[
+		--pretty sure this will cause problems
 		Game.AddCondition("race")
 			Game.SetCondTargetVehicle(Car,Car2,Car3)
 		Game.CloseCondition()
+		]]
 		Game.AddCondition("position")
 			Game.SetConditionPosition(1)
 		Game.CloseCondition()
@@ -398,6 +402,7 @@ Output([[
 	Game.AddStage()
 		Game.SetStageMessageIndex(18)
 		Game.SetHUDIcon("w_krust")
+		Game.SetMaxTraffic(5)
 		Game.AddObjective("hitpeds")
 			Game.AddNPC("krusty", "m3_krusty_talk")
 			Game.AddObjTargetModel("krusty")
@@ -406,10 +411,8 @@ Output([[
 	Game.CloseStage()
 
 	Game.AddStage("final")
-		Game.StartCountdown("count")
-		Game.AddToCountdownSequence( "o", 400 )
 		Game.AddObjective("timer")
-			Game.SetDurationTime(0.1)
+			Game.SetDurationTime(0)
 		Game.CloseObjective()
 	Game.CloseStage()
 

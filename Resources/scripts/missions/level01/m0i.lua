@@ -5,16 +5,16 @@ Game.SelectMission("m0")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
 	Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
 
+	Game.SetPedsEnabled(1)
+
 	Game.UsePedGroup(5)
 
-	if Mode.IsNormal then
 	Game.AddStage()
 		Game.SetStageMessageIndex(02)
 		Game.AddObjective("getin")
 			Game.SetObjTargetVehicle("current")
 		Game.CloseObjective()
 	Game.CloseStage()
-	end
 
 	Game.AddStage()
 		Game.RESET_TO_HERE()
@@ -27,12 +27,7 @@ Game.SelectMission("m0")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		if Mode.IsNormal then
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		end
-		Game.SetStageTime(30)
+		Game.SetStageTime(25)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
@@ -62,11 +57,11 @@ Game.SelectMission("m0")
 			Game.SetConversationCam( 4, "npc_near" )
 			Game.SetConversationCam( 5, "npc_near" )
 			Game.AddAmbientNpcAnimation( "none" )
-			Game.AddAmbientNpcAnimation( "none" )
-			Game.AddAmbientNpcAnimation( "none" )
+			Game.AddAmbientPcAnimation( "dialogue_shake_hand_in_air" )
 			Game.AddAmbientPcAnimation( "none" )
-			Game.AddAmbientPcAnimation( "dialogue_scratch_head" )
+			Game.AddAmbientPcAnimation( "dialogue_yes" )
 			Game.AddAmbientPcAnimation( "none" )
+			Game.AddAmbientPcAnimation( "dialogue_hands_in_air" )
 			Game.SetDialogueInfo("bart","npd","order",0)
 			Game.SetDialoguePositions("m0_bart_kbcam","m0_npd","m0_kburg_car")
 		Game.CloseObjective()
@@ -82,15 +77,16 @@ Game.SelectMission("m0")
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 
-	if Mode.IsNormal then
 	Game.AddStage()
 		Game.SetStageMessageIndex(02)
 		Game.AddObjective("getin")
 			Game.SetObjTargetVehicle("current")
 		Game.CloseObjective()
+		Game.SetStageTime(50)
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
-	end
 	
 	Game.AddStage()
 		Game.SetStageMessageIndex(05)
@@ -98,16 +94,11 @@ Game.SelectMission("m0")
 		Game.AddObjective("goto")
 			Game.SetDestination("m0_trynsave","carsphere")
 		Game.CloseObjective()
-		if Mode.IsNormal then
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		end
 		Game.AddCondition( "damage" )
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.AddStageTime(45)
+		Game.AddStageTime(-1)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
@@ -117,9 +108,15 @@ Game.SelectMission("m0")
 		Game.SetStageMessageIndex(6)
 		Game.SetHUDIcon( "w_fire" )
 		Game.AddObjective("delivery", "neither")
-		for i= 1,11 do
-			Game.AddCollectible("m0_fire"..i,"firewrks"); 
-		end
+			local items = {"firewrks", "lasergun", "blankbox"}
+			local x = 1
+			for i= 1,11 do
+				Game.AddCollectible("m0_fire"..i, items[x])
+				x = x + 1
+				if x > #items then
+					x = 1
+				end
+			end
 			Game.SetCollectibleEffect("wrench_collect")
 		Game.CloseObjective()
 		if Mode.IsNormal then
@@ -138,11 +135,13 @@ Game.SelectMission("m0")
 	Game.CloseStage()
 
 	Game.AddStage()
-		Game.SetHUDIcon("w_fone")
-		Game.SetStageMessageIndex(01)
+		Game.SetHUDIcon("w_mono")
+		Game.SetStageMessageIndex(11)
 		Game.AddObjective("goto")
+			Game.AddNPC("snake", "m1_snake_sd")
 			Game.SetDestination("m0_fakeloc","carsphere")
 			Game.AddStageVehicle("homer_v","m0_homer","NULL","Missions\\level01\\M0chase.con", "homer")
+			Game.AddStageVehicle("snake_v","m0_snake_car","NULL","snake_v.con")
 		Game.CloseObjective()
 		Game.AddCondition("outofvehicle")
 		Game.SetCondTime( 10000 )
@@ -151,11 +150,7 @@ Game.SelectMission("m0")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		if Mode.IsHard  then
-		Game.SetStageTime(45)
-		else
-		Game.SetStageTime(60)
-		end
+		Game.SetStageTime(70)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetCompletionDialog("dad","homer")
@@ -165,19 +160,12 @@ Game.SelectMission("m0")
 		Game.ShowStageComplete()
 		Game.SetHUDIcon( "w_homcar" )
 		Game.SetStageMessageIndex(10)
-		if Mode.IsNormal then
-		Game.AddStageTime(-1)
-		else
-		Game.AddStageTime(10)
-		end
+		Game.AddStageTime(20)
 		Game.ActivateVehicle("homer_v","NULL","chase")
 		Game.AddObjective("losetail")
+			Game.AddNPC("snake", "m1_snake_sd")
 			Game.SetObjTargetVehicle("homer_v")
-			if Mode.IsNormal then
-			Game.SetObjDistance(135)
-			else
 			Game.SetObjDistance(150)
-			end
 		Game.CloseObjective()
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
@@ -188,12 +176,17 @@ Game.SelectMission("m0")
 		Game.SetCompletionDialog("dad2","homer")
 	Game.CloseStage()
 
-	Game.AddStage("final")
-		Game.SetStageMessageIndex(1)
-		Game.SetHUDIcon("w_fone")
+	Game.AddStage()
+		Game.SetStageMessageIndex(12)
+		Game.SetHUDIcon("w_mono")
+		Game.AddStageVehicle("snake_v","m0_snake_car","NULL","snake_v.con")
 		Game.AddObjective("goto")
+			Game.AddNPC("snake", "m1_snake_sd")
 			Game.SetDestination("m0_final_loc","carsphere")
 		Game.CloseObjective()
+		Game.AddStageTime(30)
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
 		Game.AddCondition("outofvehicle")
 			Game.SetCondTime( 10000 )
 		Game.CloseCondition()
@@ -201,6 +194,16 @@ Game.SelectMission("m0")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
+	Game.CloseStage()
+	
+	-- so player doesn't lose control after reaching destination
+	-- turning goto stage into race works too, but that will crash game if an AI is set to chase or NULL
+	Game.AddStage("final")
+		Game.AddStageVehicle("snake_v","m0_snake_car","NULL","snake_v.con")
+		Game.AddObjective("timer")
+			Game.AddNPC("snake", "m1_snake_sd")
+			Game.SetDurationTime(0)
+		Game.CloseObjective()
 	Game.CloseStage()
 
 --	Game.AddStage()

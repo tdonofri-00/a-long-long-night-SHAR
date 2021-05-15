@@ -4,6 +4,7 @@ Game.SelectMission("m1")
 	Game.SetDynaLoadData("l5z4.p3d;l5r3.p3d;l5r4.p3d;")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
 	Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
+	Game.SetPedsEnabled(1)
 
 	Game.UsePedGroup(5)
 	if Mode.IsHard then
@@ -17,7 +18,7 @@ Game.SelectMission("m1")
 		Game.StartCountdown("count")
 		Game.AddToCountdownSequence( "3", 800 ) -- duration time in milliseconds
 		Game.AddToCountdownSequence( "2", 800 ) -- duration time in milliseconds
-		Game.AddToCountdownSequence( "1", 600 ) -- duration time in milliseconds
+		Game.AddToCountdownSequence( "1", 800 ) -- duration time in milliseconds
 		Game.AddToCountdownSequence( "GO", 400 ) -- duration time in milliseconds
 		Game.SetStageMessageIndex(4)
 		if Mode.IsNormal then
@@ -28,11 +29,16 @@ Game.SelectMission("m1")
 		Game.SetHUDIcon( "w_snakec" )
 		Game.PlacePlayerCar("current", "m1_car_loc")
 		Game.PutMFPlayerInCar( )
-		Game.AddStageVehicle("snake_v","m1_snk_car2","target","M1dest.con", "snake")
+		Game.AddStageVehicle("snake_v","m1_snk_car","target","Missions\\level01\\M1dest.con", "snake")
+		--[[
 		if Mode.IsNormal then
 		Game.SetVehicleAIParams( "snake_v", -10, -9 )
 		end
+		]]
+		Game.SetVehicleAIParams( "snake_v", -10, -9 )
 		Game.AddStageWaypoint( "m1_waypointS_1" )
+		Game.AddStageWaypoint( "m1_waypointS_2" )
+		Game.AddStageWaypoint( "m1_waypointS_3" )
 		Game.AddStageWaypoint( "m1_dmv_fail" )
 		Game.AddObjective("dump")
 			Game.SetObjTargetVehicle("snake_v")
@@ -52,11 +58,11 @@ Game.SelectMission("m1")
 	Game.CloseStage()
 
 	Game.AddStage()
-		Game.SetHUDIcon("w_kburg")
+		Game.SetHUDIcon("w_lexicon")
 		Game.SetStageMessageIndex(05)
 		Game.AddObjective("goto")
-			Game.SetDestination("m1_lardfake","carsphere")
-			Game.AddStageVehicle("yellow","m1_yellow_loc","NULL","M1dest2.con", "male1")
+			Game.SetDestination("m1_accomplice1_goto","carsphere")
+			Game.AddStageVehicle("yellow","m1_accomplice1","NULL","Missions\\level01\\M1dest2.con", "male1")
 		Game.CloseObjective()
 		Game.AddCondition("outofvehicle")
 			Game.SetCondTime( 10000 )
@@ -70,12 +76,60 @@ Game.SelectMission("m1")
 
 	Game.AddStage()
 		Game.CHECKPOINT_HERE()
-		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5z2.p3d;")
+		Game.SetCheckpointDynaLoadData("l5r1.p3d;l5z2.p3d;l5r2.p3d;")
 		Game.SetCheckpointResetPlayerInCar("m1_checkpoint1" )
 		Game.SetStageMessageIndex(6)
 		Game.SetHUDIcon("w_yellow")
 		Game.ActivateVehicle("yellow","NULL","target")
+		for i=1, 7 do
+			Game.AddStageWaypoint("m1_waypoint1-" .. i)
+		end
+		
+		Game.AddObjective("dump")
+			Game.SetObjTargetVehicle("yellow")
+			Game.AddCollectible("m1_stuff2","firewrks")
+		Game.CloseObjective()
+		Game.AddCondition("outofvehicle")
+			Game.SetCondTime( 10000 )
+		Game.CloseCondition()
+		Game.AddCondition( "damage" )
+			Game.SetCondMinHealth( 0.0 )
+			Game.SetCondTargetVehicle( "current" )
+		Game.CloseCondition()
+		Game.SetStageTime(120)
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
+	Game.CloseStage()
+	
+	Game.AddStage()
+		--Game.SetHUDIcon("w_statio")
+		Game.SetHUDIcon("w_kburg")
+		Game.SetStageMessageIndex(7)
+		Game.AddObjective("goto")
+			Game.SetDestination("m1_accomplice2_goto","carsphere")
+			Game.AddStageVehicle("black","m1_accomplice2","NULL","Missions\\level01\\M1dest3.con", "joger1")
+		Game.CloseObjective()
+		Game.AddCondition("outofvehicle")
+			Game.SetCondTime( 10000 )
+			Game.CloseCondition()
+		Game.AddCondition( "damage" )
+		Game.SetCondMinHealth( 0.0 )
+			Game.SetCondTargetVehicle( "current" )
+		Game.CloseCondition()
+		Game.ShowStageComplete() -- Checkpoint Notification
+	Game.CloseStage()
+
+	Game.AddStage("final")
+		Game.CHECKPOINT_HERE()
+		Game.SetCheckpointDynaLoadData("l5z1.p3d;l5r1.p3d;l5z2.p3d;")
+		Game.SetCheckpointResetPlayerInCar("m1_checkpoint2" )
+		Game.SetStageMessageIndex(6)
+		Game.SetHUDIcon("w_black")
+		Game.ActivateVehicle("black","NULL","target")
+		-- holy shit look at all those waypoints. does this stage really need that many?
 		-- Basic route
+		Game.AddStageWaypoint("m1_wp_0")
+		Game.AddStageWaypoint("m1_wp_1b")
 		Game.AddStageWaypoint("m1_wp_2b")
 		Game.AddStageWaypoint("m1_wp_3b")
 		Game.AddStageWaypoint("m1_wp_4")
@@ -106,7 +160,7 @@ Game.SelectMission("m1")
 		Game.AddStageWaypoint("m1_wp_4")
 		-- End of waypoints
 		Game.AddObjective("dump")
-			Game.SetObjTargetVehicle("yellow")
+			Game.SetObjTargetVehicle("black")
 			Game.AddCollectible("m1_stuff2","kmeal")
 		Game.CloseObjective()
 		Game.AddCondition("outofvehicle")
@@ -116,71 +170,9 @@ Game.SelectMission("m1")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
+		Game.SetStageTime(120)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
-		if Mode.IsHard  then
-		Game.SetStageTime(125)
-		else
-		Game.SetStageTime(150)
-		end
-	Game.CloseStage()
-
-	Game.AddStage()
-		Game.SetHUDIcon("w_statio")
-		Game.SetStageMessageIndex(7)
-		Game.AddObjective("goto")
-			Game.SetDestination("m1_kburger","carsphere")
-			Game.AddStageVehicle("black","m1_black_loc","NULL","M1dest3.con", "joger1")
-		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-			Game.CloseCondition()
-		Game.AddCondition( "damage" )
-		Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.ShowStageComplete() -- Checkpoint Notification
-	Game.CloseStage()
-
-	Game.AddStage()
-		Game.CHECKPOINT_HERE()
-		Game.SetCheckpointDynaLoadData("l5z4.p3d;l5r3.p3d;l5r4.p3d;")
-		Game.SetCheckpointResetPlayerInCar("m1_checkpoint2" )
-		Game.SetHUDIcon("w_black")
-		Game.SetStageMessageIndex(6)
-		Game.ActivateVehicle("black","NULL","target")
-		-- Basic route
-		for i= 1,3 do
-		 Game.AddStageWaypoint("m1_waypointB_"..i)
-		end
-		for i= 1,8 do
-		 Game.AddStageWaypoint("m1_waypointB2_"..i)
-		end
-		-- End of waypoints
-		Game.AddObjective("dump")
-			Game.SetObjTargetVehicle("black")
-			Game.AddCollectible("m1_stuff2","firewrks")
-		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-			Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
-		if Mode.IsHard  then
-		Game.SetStageTime(115)
-		else
-		Game.SetStageTime(135)
-		end
-	Game.CloseStage()
-
-	Game.AddStage("final")
-		Game.AddObjective("timer")
-		Game.SetDurationTime(0.1)
-		Game.CloseObjective()
 	Game.CloseStage()
 
 Game.CloseMission()

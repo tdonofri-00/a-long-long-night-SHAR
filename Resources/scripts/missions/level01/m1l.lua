@@ -5,8 +5,8 @@ Game.LoadP3DFile("art\\missions\\level01\\m1.p3d")
 Game.LoadDisposableCar("art\\cars\\snake_v.p3d","snake_v","AI")
 Game.LoadDisposableCar("art\\cars\\black.p3d","black","AI")
 Game.LoadDisposableCar("art\\cars\\yellow.p3d","yellow","AI")
-Game.LoadDisposableCar("art\\cars\\cPolic2.p3d","cPolic2","AI")
-Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")
+--Game.LoadDisposableCar("art\\cars\\cPolic2.p3d","cPolic2","AI")
+--Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")
 
 --Mission Props
 Game.LoadP3DFile("art\\missions\\level03\\kmeal.p3d")
@@ -25,3 +25,6 @@ Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_statio
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\object\\w_fone.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\object\\w_fire.p3d" )
 Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_dmv.p3d" )
+
+--file yet to be made
+--Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\location\\w_lexicon.p3d" )

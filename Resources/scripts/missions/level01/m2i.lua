@@ -6,21 +6,34 @@ local function DisableAllCameras()
 	Game.DisableTrigger("m2_camera3")
 end
 
+local function L1M2EnableHints()
+	if Mode.IsHard then
+	Game.SetNumValidFailureHints( 5 )
+	else
+	Game.SetNumValidFailureHints( 4 )
+	end
+end
+
+local function StandardConditions()
+	Game.AddCondition("outofvehicle")
+		Game.SetCondTime( 10000 )
+	Game.CloseCondition()
+	Game.AddCondition( "damage" )
+		Game.SetCondMinHealth( 0.0 )
+		Game.SetCondTargetVehicle( "current" )
+	Game.CloseCondition()
+end
+
 Game.SelectMission("m2")
 
 	Game.SetMissionResetPlayerInCar("m2_car_loc")
-	--Game.SetDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
 	Game.SetDynaLoadData("l5z1.p3d;l5r1.p3d;l5r4.p3d;")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;")	-- Barracade
 	Game.StreetRacePropsUnload("l1m1_baracade.p3d:m2_cops.p3d:")	-- Barracade and Cop Props.
 	Game.SetPedsEnabled(1)
 
 	Game.UsePedGroup(5)
-	if Mode.IsHard then
-	Game.SetNumValidFailureHints( 5 )
-	else
-	Game.SetNumValidFailureHints( 4 )
-	end
+	L1M2EnableHints()
 	
 	Game.AddStage(0)
 		DisableAllCameras()
@@ -155,8 +168,8 @@ Game.SelectMission("m2")
 		Game.NoTrafficForStage()
 		Game.ActivateVehicle("cLimo","NULL","chase")
 		Game.ActivateVehicle("cNerd","NULL","chase")
-		Game.AddStageWaypoint( "m2_raceend" )
 		Game.AddObjective( "goto")
+			Game.TurnGotoDialogOff()
 			Game.AddNPC("lou","m2_crowd_npc1")
 			Game.AddNPC("eddie","m2_crowd_npc2")
 			Game.AddNPC("wiggum","m2_crowd_npc3")
@@ -177,27 +190,6 @@ Game.SelectMission("m2")
 		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
-
---[[
-	Game.AddStage(0) -- AAAAAAAAAAA CINEMATICS
-		-- Obligatory checkpoint because players new to this stage have only trial and error to find inside/outside triggers
-		Game.SetStageAllowMissionCancel(0)
-		Game.SetMaxTraffic(0)
-		Game.AddStageCharacter("bart", "spawn_player_to_cam_here", "", "current", "m2_car")
-		for i= 1,5 do
-		Game.AddStageWaypoint("m2_wp_"..i)
-		end
-		Game.AddObjective("timer")
-			Game.AddStageVehicle("cLimo2","m2_nerdcam","evade","Missions\\level04\\M7Evade.con","mobstr")
-			Game.AddStageVehicle("cNerd","m2_limocam","evade","Missions\\level04\\M7Evade.con","male2")
-			Game.SetDurationTime(7.5)
-			Game.SetFadeOut(0.1)
-		Game.CloseObjective()
-		Game.StageStartMusicEvent("M2_drama")
-		Game.SetStageMusicAlwaysOn()
-	Game.CloseStage()
-]]
-
 	
 	Game.AddStage(0) -- AAAAAAAAAAA CINEMATICS
 		-- Obligatory checkpoint because players new to this stage have only trial and error to find inside/outside triggers
@@ -215,9 +207,7 @@ Game.SelectMission("m2")
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	
-	Output([[
-		AddStage("locked", "car", "");
-	]]) -- AAAAAAAAAAA CINEMATICS
+	Game.AddStage("locked", "car", "") -- AAAAAAAAAAA CINEMATICS
 		-- Obligatory checkpoint because players new to this stage have only trial and error to find inside/outside triggers
 		Game.DisableTrigger("m2_camera2")
 		Game.DisableTrigger("m2_camera3")
@@ -246,30 +236,6 @@ Game.SelectMission("m2")
 		Game.StageStartMusicEvent("M2_drama")
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
-
---[[
-	Game.AddStage() -- teleports the player back from the camera to playable stage
-		Game.DisableTrigger("some_camera_locator") -- THIS LINE IS NEEDED FOR EVERY STAGE AFTER "AAAAAAAAAAA CINEMATICS"
-		Game.SetStageAllowMissionCancel(0)
-		Game.AddObjective("timer")
-			Game.SetDurationTime(1)
-			Game.AddStageCharacter("bart", "m2_bart_escape", "", "current", "m2_car")
-		Game.CloseObjective()
-		Game.StageStartMusicEvent("M2_drama")
-		Game.SetStageMusicAlwaysOn()
-	Game.CloseStage()
-
-	Game.AddStage()
-		Game.DisableTrigger("some_camera_locator")
-		Game.StartCountdown("count")
-		Game.AddToCountdownSequence( "o", 100 )
-		Game.AddObjective("timer")
-			Game.SetDurationTime(1)
-		Game.CloseObjective()
-		Game.StageStartMusicEvent("M2_drama")
-		Game.ShowStageComplete() -- Checkpoint Notification
-	Game.CloseStage()
-]]
 
 	Game.AddStage(0)
 		DisableAllCameras()
@@ -353,6 +319,8 @@ Game.SelectMission("m2")
 		Game.AddObjective("timer")
 			Game.SetDurationTime(3)
 		Game.CloseObjective()
+		Game.StageStartMusicEvent("M2_drama")
+		Game.SetStageMusicAlwaysOn()
 		Game.SetIrisWipe(0.1)
 	Game.CloseStage()
 	
@@ -391,7 +359,7 @@ Game.SelectMission("m2")
 		Game.AddStageWaypoint("m2_waypoint_near_alley2")
 		Game.AddObjective("timer")
 			Game.AddNPC("krusty", "m2_krusty")
-			Game.SetDurationTime(4)
+			Game.SetDurationTime(4.5)
 		Game.CloseObjective()
 		Game.SetIrisWipe(0.1)
 		Game.StageStartMusicEvent("M2_start")
@@ -504,37 +472,5 @@ Game.SelectMission("m2")
 			Game.SetDurationTime(0.5)
 		Game.CloseObjective()
 	Game.CloseStage()
---[[
-	Game.AddStage("final")
-		Game.DisableTrigger("some_camera_locator")
-		Game.SetHUDIcon( "w_bestmn" )
-		Game.SetStageMessageIndex(7)
-		Game.SetStageTime(30)
-		Game.ActivateVehicle("cNerd","NULL","chase")
-		Game.AddObjective("losetail")
-			Game.SetObjTargetVehicle("cNerd")
-			Game.SetObjDistance(150)
-			-- unsure if there is a more efficient way to remove the extra npcs
-			--Game.RemoveNPC("male2")
-			--Game.RemoveNPC("male4")
-			--Game.RemoveNPC("olady2")
-			--Game.RemoveNPC("fem3")
-		Game.CloseObjective()
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("insidetrigger")
-			Game.SetCondTrigger("m2_crowd1")
-			Game.SetCondSound("spotted_alert","enter_trigger")
-		Game.CloseCondition()
-		Game.SetStageMusicAlwaysOn()
-	Game.CloseStage()
-	]]
 
 Game.CloseMission()

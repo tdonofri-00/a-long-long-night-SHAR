@@ -121,7 +121,7 @@ Game.SetBonusMissionDialoguePos("bm1","bm1_apu","bm_frink_walk_1","bm1_carstart"
 --
 Game.AddPurchaseCarReward( "gil", "gil", "npd", "gil_loc", 1.3, "gil_car" )
 Game.AddPurchaseCarNPCWaypoint("gil", "gil_walk1")
---Game.AddPurchaseCarReward( "simpson", "homer", "npd", "homer_loc", 1.3, "homer_car" )
+Game.AddPurchaseCarReward( "simpson", "bill_sel", "npd", "billboard_sell", 1.3, "billboard_car" )
 --Game.AddPurchaseCarNPCWaypoint("homer", "homer_walk1")
 
 --Game.AddING TRAFFIC GROUP FOR LEVEL 05--

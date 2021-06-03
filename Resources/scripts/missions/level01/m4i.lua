@@ -1,21 +1,42 @@
+local timeLimit = {60, 60}
+
+local function StandardConditions()
+	Game.AddCondition("outofvehicle")
+		Game.SetCondTime( 10000 )
+	Game.CloseCondition()
+	Game.AddCondition( "damage" )
+		Game.SetCondMinHealth( 0.0 )
+		Game.SetCondTargetVehicle( "current" )
+	Game.CloseCondition()
+end
+
+local function TrafficDifficulty()
+	if Mode.IsNormal then
+	Game.SetMaxTraffic(2)
+	else
+	Game.SetMaxTraffic(3)
+	end
+end
+
 Game.SelectMission("m4")
 
-	Game.SetMissionResetPlayerInCar("m4_bart_carstart")
+	Game.SetMissionResetPlayerInCar("m4_homercar_sd")
 	Game.SetDynaLoadData("l5z2.p3d;l5r1.p3d;l5r2.p3d;")
-	Game.InitLevelPlayerVehicle("homer_v","m4_bart_carstart","OTHER")
+	Game.InitLevelPlayerVehicle("homer_v","m4_homercar_sd","OTHER")
 	Game.SetForcedCar()
+	
+	Game.StreetRacePropsLoad("m4_graffiti.p3d;")
+	Game.StreetRacePropsUnload("m4_graffiti.p3d:")
+	
+	Game.SetPedsEnabled(1)
+	Game.SetParkedCarsEnabled(1)
 
 	Game.AddStage()
-		Game.EnableHitAndRun()
+		Game.DisableTrigger("m4_enable_graffiti")	--great. i got to add this to every fucking stage.
 		Game.SetHUDIcon("w_save")
 		Game.SetStageMessageIndex(4)
 		Game.SetMaxTraffic(4)
 		Game.AddStageVehicle("cDuff","m4_duffsmall_loc","NULL","Missions\\level01\\M4dump.con", "jasper")
-		Game.StartCountdown("count")
-		Game.AddToCountdownSequence( "3", 800 ) -- duration time in milliseconds
-		Game.AddToCountdownSequence( "2", 800 ) -- duration time in milliseconds
-		Game.AddToCountdownSequence( "1", 800 ) -- duration time in milliseconds
-		Game.AddToCountdownSequence( "GO", 400 ) -- duration time in milliseconds
 		Game.AddObjective("goto")
 			Game.SetDestination("m4_trynsave","carsphere")
 		Game.CloseObjective()
@@ -26,11 +47,9 @@ Game.SelectMission("m4")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		if Mode.IsNormal then
-		Game.SetStageTime(40)
-		else
-		Game.SetStageTime(30)
-		end
+		timeLimit[Mode.NormalMode] = 40
+		timeLimit[Mode.HardMode] = 30
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 	Game.CloseStage()
@@ -38,27 +57,22 @@ Game.SelectMission("m4")
 	Game.AddStage()
 		Game.SetHUDIcon("w_duff")
 		Game.SetStageMessageIndex(5)
+		TrafficDifficulty()
 		Game.ActivateVehicle("cDuff","NULL","evade")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(2)
-		else
-		Game.SetMaxTraffic(3)
-		end
-		Game.AddStageVehicle("cPolic3","m4_ambush2","NULL","Missions\\level01\\M4dump.con", "wiggum")
+		Game.AddStageVehicle("cPolic3","m4_ambush2","NULL","Missions\\level01\\M4chase.con", "wiggum")
 		for k, v in pairs({1,3,4,6,7})do
 		Game.AddStageWaypoint("m4_waypoint"..v.."")
 		end
 		Game.AddStageWaypoint("m4_duffrealpoint") 
 		Game.AddObjective("dump")
 			Game.SetObjTargetVehicle("cDuff")
-			for k, v in pairs({1,3,4,5})do
-			Game.AddCollectible("m4_beer"..v.."","coolr")
+			for i=1, 4 do
+				Game.AddCollectible("m4_beer" .. i, "coolr")
 			end
 			Game.BindCollectibleTo(0, 0)
 			Game.BindCollectibleTo(1, 1)
 			Game.BindCollectibleTo(2, 2)
 			Game.BindCollectibleTo(3, 3)
-			Game.SetCollectibleSoundEffect("level_2_pickup_sfx")
 		Game.CloseObjective()
 		Game.AddCondition("followdistance")
 			if Mode.IsNormal then
@@ -68,75 +82,58 @@ Game.SelectMission("m4")
 			end
 			Game.SetCondTargetVehicle("cDuff")
 		Game.CloseCondition()
-		Game.ShowStageComplete()
 	Game.CloseStage()
 
 	Game.AddStage()
+		Game.DisableTrigger("m4_enable_graffiti")	--never mind. just these two.
 		Game.SetHUDIcon("w_moes")
 		Game.SetStageMessageIndex(1)
-		Game.DisableHitAndRun()
-		Game.ActivateVehicle("cDuff","","race")
-		Game.ActivateVehicle("cPolic3","NULL","race") -- Police chasing Duff Truck
-		Game.AddStageVehicle("cDuff2","m4_duffbig_loc","NULL","Missions\\level01\\M4dump.con", "jimbo")
+		Game.ActivateVehicle("cDuff","","evade")
+		Game.ActivateVehicle("cPolic3","NULL","evade") -- Police chasing Duff Truck
+		Game.AddStageVehicle("cDuff2","m4_duffbig_loc","NULL","Missions\\level01\\M4dump2.con", "moleman")	--jimbo being used for later
 		Game.AddStageWaypoint("m4_duffrealpoint")
 		Game.AddObjective("goto")
 			--Game.SetDestination("m4_moestavern","carsphere")
 			Game.SetDestination("m4_duffbig_chase_start","carsphere")
 		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.SetStageTime(45)
+		StandardConditions()
+		timeLimit[Mode.NormalMode] = 50
+		timeLimit[Mode.HardMode] = 40
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
+		Game.ShowStageComplete()	--Checkpoint Notif
 	Game.CloseStage()
 
 	Game.AddStage()
+		Game.CHECKPOINT_HERE()
+		Game.SetCheckpointDynaLoadData("l5r1.p3d;l5z1.p3d;l5r4.p3d;")
+		Game.SetCheckpointResetPlayerInCar("m4_restart1" )
 		Game.SetHUDIcon("w_duff2")
 		Game.SetStageMessageIndex(7)
-		Game.ActivateVehicle("cDuff2","NULL","evade")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		TrafficDifficulty()
+		Game.AddStageVehicle("scorp_v","m4_bully_car","NULL","Missions\\level01\\M4dest.con", "kearney")
+		Game.ActivateVehicle("cDuff2","NULL","target")
+		Game.SetStageAITargetCatchupParams("cDuff2", 9998, 9999)
 		Game.AddStageWaypoint("m4_waypoint1b")
 		Game.AddStageWaypoint("m4_waypoint2b")
 		Game.AddStageWaypoint("m4_waypoint3b")
 		Game.AddStageWaypoint("m4_waypoint4b")
-		for k, v in pairs({1,3,4,6,7})do
-		Game.AddStageWaypoint("m4_waypoint"..v.."")
-		end
 		Game.AddObjective("dump")
 			Game.SetObjTargetVehicle("cDuff2")
-			for k, v in pairs({1,3,4})do
-			Game.AddCollectible("m4_moarbeer"..v.."", "coolr")
+			for i=1, 8 do
+				Game.AddCollectible("m4_beer" .. i,"coolr")
 			end
-			for i= 1,5 do
-			Game.AddCollectible("m4_beer"..i ,"coolr")
-			end
-			Game.SetCollectibleSoundEffect("level_5_pickup_sfx")
+			Game.AddStageVehicleCharacter("scorp_v", "jimbo", "pl")
 		Game.CloseObjective()
-		if Mode.IsNormal then
-		Game.AddCondition("timeout")
-			Game.SetStageTime(90)
-		Game.CloseCondition()
-		else
-		Game.AddCondition("followdistance")
-			Game.SetFollowDistances( 0 , 135)
+		Game.AddCondition("race")
 			Game.SetCondTargetVehicle("cDuff2")
 		Game.CloseCondition()
-		Game.AddCondition("timeout")
-			Game.SetStageTime(75)
-		Game.CloseCondition()
-		end
+		StandardConditions()
 		Game.ShowStageComplete()
 	Game.CloseStage()
 
+--[[
 	Game.AddStage()
 		Game.SetStageMessageIndex(8)
 		Game.SetHUDIcon("w_duff2")
@@ -168,27 +165,53 @@ Game.SelectMission("m4")
 		Game.CloseCondition()
 		Game.ShowStageComplete()
 	Game.CloseStage()
+]]
 
 	Game.AddStage()
 		Game.SetHUDIcon("w_moes")
 		Game.SetStageMessageIndex(1)
-		Game.DisableHitAndRun()
+		Game.AddStageVehicle("scorp_v","m4_bully_car","NULL","Missions\\level01\\M4dest.con", "kearney")
+		Game.AddObjective("goto")
+			Game.TurnGotoDialogOff()
+			Game.SetDestination("m4_bully_trigger","carsphere")
+		Game.CloseObjective()
+		StandardConditions()
+		timeLimit[Mode.NormalMode] = 40
+		timeLimit[Mode.HardMode] = 30
+		Game.SetStageTime(timeLimit[Mode.Current])
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
+	Game.CloseStage()
+
+	Game.AddStage()
+		Game.SetHUDIcon("w_scorp")	-- to be made???
+		Game.SetStageMessageIndex(8)
+		Game.SetMaxTraffic(2)
+		Game.ActivateVehicle("scorp_v","NULL","target")
+		Game.SetVehicleAIParams("scorp_v", -10, -9)
+		Game.AddStageWaypoint("m4_waypoint4c")
+		Game.AddStageWaypoint("m4_waypoint3c")
+		Game.AddStageWaypoint("m4_waypoint2c")
+		Game.AddStageWaypoint("m4_waypoint1c")
+		Game.AddObjective("dump")
+			Game.SetObjTargetVehicle("scorp_v")
+			Game.AddCollectible("m4_beer1", "spraycan")
+		Game.CloseObjective()
+		StandardConditions()
+		Game.SetStageTime(60)
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
+	Game.CloseStage()
+
+	Game.AddStage()
+		Game.SetHUDIcon("w_moes")
+		Game.SetStageMessageIndex(9)
 		Game.AddObjective("goto")
 			Game.SetDestination("m4_moes_fake","carsphere")
-			Game.AddStageVehicle("cPolic2","m4_ambush1","NULL","Missions\\level01\\M0chase.con", "wiggum") -- OH OH THERE'S WIGGUM AGAIN... AGAIN
+			Game.AddStageVehicle("cPolic3","m4_ambush1","NULL","Missions\\level01\\M4chase.con", "wiggum") -- OH OH THERE'S WIGGUM AGAIN... AGAIN
 		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		if Mode.IsHard  then
-		Game.AddStageTime(45)
-		else
-		Game.AddStageTime(60)
-		end
+		StandardConditions()
+		Game.SetStageTime(60)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetCompletionDialog("ambush","wiggum") -- ... AGAIN
@@ -197,25 +220,14 @@ Game.SelectMission("m4")
 	Game.AddStage() -- 	AN ABSOLUTE LIFETIME OF COMMUNITY SERVICE FOR YOU
 		Game.SetHUDIcon( "w_wig" )
 		Game.SetStageMessageIndex(10)
-		Game.DisableHitAndRun()
-		Game.AddStageTime(20)
-		Game.ActivateVehicle("cPolic2","NULL","chase")
+		Game.SetStageTime(60)
+		Game.ActivateVehicle("cPolic3","NULL","chase")
 		Game.AddObjective("losetail")
-			Game.SetObjTargetVehicle("cPolic2")
-			if Mode.IsNormal then
-			Game.SetObjDistance(135)
-			else
-			Game.SetObjDistance(150)
-			end
+			Game.SetObjTargetVehicle("cPolic3")
+			Game.SetObjDistance(140)
 		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
+		StandardConditions()
 		Game.AddCondition("timeout")
-		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
 		Game.SetCompletionDialog("escape","wiggum")
 	Game.CloseStage()
@@ -226,13 +238,7 @@ Game.SelectMission("m4")
 		Game.AddObjective("goto")
 			Game.SetDestination("m4_moestavern","carsphere")
 		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
+		StandardConditions()
 		Game.SetFadeOut(1.0)
 		Game.SwapInDefaultCar()
 		Game.SetSwapDefaultCarLocator("m4_carswap")
@@ -250,24 +256,27 @@ Game.SelectMission("m4")
 	Game.CloseStage()
 
 	Game.AddStage("final")
-		Game.EnableHitAndRun()
 		Game.NoTrafficForStage()
 		Game.AddObjective("dialogue")
 			Game.AddNPC("homer","m4_homer_loc")
 			Game.AmbientAnimationRandomize( 1, 0 )
 			Game.AmbientAnimationRandomize( 0, 0 )
 			Game.SetConversationCam( 0, "npc_far" )
-			Game.SetConversationCam( 1, "pc_near" )
-			Game.SetConversationCam( 2, "npc_far" )
+			Game.SetConversationCam( 1, "npc_far" )
+			--[[
 			Game.AddAmbientNpcAnimation( "dialogue_shake_hand_in_air" )
 			Game.AddAmbientNpcAnimation( "none" )
 			Game.AddAmbientNpcAnimation( "dialogue_yes" )
-			Game.AddAmbientNpcAnimation( "dialogue_scratch_head" )
 			Game.AddAmbientPcAnimation( "none" )
 			Game.AddAmbientPcAnimation( "dialogue_cross_arms" )
 			Game.AddAmbientPcAnimation( "none" )
+			]]
+			Game.AddAmbientNpcAnimation( "none" )
+			Game.AddAmbientNpcAnimation( "dialogue_yes" )
+			Game.AddAmbientPcAnimation( "dialogue_cross_arms" )
+			Game.AddAmbientPcAnimation( "none" )
 			Game.SetCamBestSide("m4_bestside")
-			Game.SetDialogueInfo("bart","homer","duff2",0)
+			Game.SetDialogueInfo("bart","homer","enough",0)
 			Game.SetDialoguePositions("m4_conv_bart","m4_homer_loc","m4_carswap")
 		Game.CloseObjective()
 	Game.CloseStage()

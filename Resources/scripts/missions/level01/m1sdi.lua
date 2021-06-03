@@ -29,9 +29,14 @@ Game.SelectMission("m1sd")
 		Game.SetMaxTraffic(5)
 		Game.AddObjective("talkto")
 			Game.AddNPC("snake", "m1_snake_sd")
+			-- gets stuck at the benches
+			--[[
 			for i= 1,3 do
 			Game.AddObjectiveNPCWaypoint("snake" , "m1_snakewalk_"..i)
 			end
+			]]
+			Game.AddObjectiveNPCWaypoint("snake", "m1_snakewalk_straight")
+			Game.AddObjectiveNPCWaypoint("snake", "m1_snake_sd")
 			Game.SetTalkToTarget("snake", 0, 0)
 			Game.AddStageVehicle("snake_v","m1_snk_car_sd","NULL","snake_v.con")
 		Game.CloseObjective()
@@ -71,7 +76,7 @@ Game.SelectMission("m1sd")
 		Game.NoTrafficForStage()
 		Game.AddStageVehicle("snake_v","m1_snk_car_sd","NULL","snake_v.con")
 		Game.AddStageVehicle("yellow","m1_goony1_sd","evade","fone_v.con", "male1")
-		Game.AddStageVehicle("black","m1_goony2_sd","evade","fone_v.con", "joger1")
+		Game.AddStageVehicle("black","m1_goony2_sd","evade","fone_v.con", "joger2")
 		Game.AddStageCharacter("bart", "spawn_player_to_cam_here", "", "current", "m1_car_loc")
 		Game.AddStageWaypoint("m1_goonies_waypoint")
 		Game.AddObjective("timer")

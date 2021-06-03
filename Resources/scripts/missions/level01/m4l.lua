@@ -13,8 +13,9 @@ Game.LoadP3DFile( "art\\frontend\\dynaload\\images\\msnicons\\char\\w_wig.p3d" )
 Game.LoadDisposableCar("art\\cars\\homer_v.p3d","homer_v","OTHER") -- Replace this with car port later
 Game.LoadDisposableCar("art\\cars\\cDuff.p3d","cDuff","AI")
 Game.LoadDisposableCar("art\\cars\\cDuff2.p3d","cDuff2","AI")
-Game.LoadDisposableCar("art\\cars\\cPolic2.p3d","cPolic2","AI")
-Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")
+Game.LoadDisposableCar("art\\cars\\scorp_v.p3d","scorp_v","AI")
+Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")	-- no fake driver
 
 -- Props
 Game.LoadP3DFile("art\\missions\\level01\\coolr.p3d")
+Game.LoadP3DFile("art\\missions\\level01\\spraycan.p3d")

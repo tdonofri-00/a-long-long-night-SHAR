@@ -31,7 +31,7 @@ Game.SelectMission("m0sd")
 
 	Game.AddStage(1)
 		Game.AddObjective("dialogue")
-			Game.SetPresentationBitmap( "art/frontend/dynaload/images/mis00_01.p3d" )
+			Game.SetPresentationBitmap( "art/frontend/dynaload/images/mis01_00.p3d" )
 			Game.AddNPC("npd","m0_npd_sd")
 			Game.AmbientAnimationRandomize( 1, 0 )
 			Game.AmbientAnimationRandomize( 0, 0 )

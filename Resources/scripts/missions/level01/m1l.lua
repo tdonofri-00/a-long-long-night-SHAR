@@ -9,8 +9,9 @@ Game.LoadDisposableCar("art\\cars\\yellow.p3d","yellow","AI")
 --Game.LoadDisposableCar("art\\cars\\cPolic3.p3d","cPolic3","AI")
 
 --Mission Props
-Game.LoadP3DFile("art\\missions\\level03\\kmeal.p3d")
+Game.LoadP3DFile("art\\missions\\level06\\lasergun.p3d")
 Game.LoadP3DFile("art\\missions\\level02\\firewrks.p3d")
+Game.LoadP3DFile("art\\missions\\level01\\blankbox.p3d")
 Game.LoadP3DFile("art\\missions\\generic\\dmv_door.p3d")
 
 --Icons

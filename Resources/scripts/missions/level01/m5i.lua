@@ -1,3 +1,38 @@
+local function DisableAllPosters()
+	Game.DisableTrigger("Poster1Loc")
+	Game.DisableTrigger("Poster2Loc")
+	Game.DisableTrigger("Poster3Loc")
+end
+
+local function DisableAllPostersStage2()
+	Game.DisableTrigger("Poster1Loc")
+	Game.DisableTrigger("Poster3Loc")
+end
+
+local function TrafficDifficulty()
+	if Mode.IsNormal then
+	Game.SetMaxTraffic(3)
+	else
+	Game.SetMaxTraffic(4)
+	end
+end
+
+local function StandardConditions()
+	Game.AddCondition("outofvehicle")
+		Game.SetCondTime( 10000 )
+	Game.CloseCondition()
+	Game.AddCondition( "damage" )
+		Game.SetCondMinHealth( 0.0 )
+		Game.SetCondTargetVehicle( "current" )
+	Game.CloseCondition()
+end
+
+local function RetainTimer()
+	Game.AddStageTime(-1)
+	Game.AddCondition("timeout")
+	Game.CloseCondition()
+end
+
 Game.SelectMission("m5")
 
 	Game.SetMissionResetPlayerInCar("m5_carstart")
@@ -7,9 +42,7 @@ Game.SelectMission("m5")
 
 	if Mode.IsNormal then
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
+		DisableAllPosters()
 		Game.SetStageMessageIndex(12)
 		Game.AddObjective("getin")
 			Game.SetObjTargetVehicle("current")
@@ -19,14 +52,8 @@ Game.SelectMission("m5")
 	
 	Game.AddStage()
 		Game.RESET_TO_HERE()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPosters()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(03)
 		Game.SetHUDIcon("w_train")
 		Game.AddObjective("goto")
@@ -51,14 +78,8 @@ Game.SelectMission("m5")
 	
 
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPosters()
+		TrafficDifficulty()
 		Game.SetHUDIcon( "w_moecar" )
 		Game.SetStageMessageIndex(04)
 		Game.AddStageTime(-1)
@@ -73,26 +94,14 @@ Game.SelectMission("m5")
 		Game.CloseObjective()
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
+		StandardConditions()
 		Game.SetCompletionDialog("notv","moe")
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
+		DisableAllPosters()
 		Game.SetStageMessageIndex(10)
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		TrafficDifficulty()
 		Game.SetHUDIcon("w_train")
 		Game.AddObjective("goto")
 			Game.SetDestination("m5_trainyard","carsphere")
@@ -110,14 +119,8 @@ Game.SelectMission("m5")
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPosters()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(09)
 		Game.SetHUDIcon("w_billb1")
 		Game.AddObjective("goto")
@@ -131,22 +134,14 @@ Game.SelectMission("m5")
 			Game.SetCondTime( 10000 )
 		Game.CloseCondition()
 		if Mode.IsHard then
-		Game.AddStageTime(-1)
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
+		RetainTimer()
 		end
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster2Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPosters()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(06)
 		Game.SetHUDIcon("w_billb1")
 		Game.AddObjective("insidetrigger")
@@ -168,25 +163,14 @@ Game.SelectMission("m5")
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPostersStage2()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(05)
 		Game.SetHUDIcon("w_center")
 		Game.AddObjective("goto")
 			Game.SetDestination("m5_citycenter","carsphere")
 		Game.CloseObjective()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
+		StandardConditions()
 		Game.AddStageTime(60)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
@@ -194,77 +178,41 @@ Game.SelectMission("m5")
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPostersStage2()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(09)
 		Game.SetHUDIcon("w_billb2")
-		Game.AddStageTime(-1)
 		Game.AddObjective("goto")
 			Game.SetDestination("m5_poster1","triggersphere")
 		Game.CloseObjective()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
+		StandardConditions()
+		RetainTimer()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	
 	Game.AddStage()
-		Game.DisableTrigger("Poster1Loc")
-		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		DisableAllPostersStage2()
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(06)
 		Game.SetHUDIcon("w_billb2")
 		Game.AddObjective("insidetrigger")
 			Game.SetObjTrigger("Poster1Obj")
 			Game.SetObjThreshold(4)
 		Game.CloseObjective()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddStageTime(-1)
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
+		StandardConditions()
+		RetainTimer()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	
 	Game.AddStage()
 		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(07)
 		Game.SetHUDIcon("w_highwy")
 		Game.AddObjective("goto")
 			Game.SetDestination("m5_highway","carsphere")
 		Game.CloseObjective()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
+		StandardConditions()
 		Game.AddStageTime(55)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
@@ -273,36 +221,20 @@ Game.SelectMission("m5")
 	
 	Game.AddStage()
 		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(09)
 		Game.SetHUDIcon("w_billb3")
-		Game.AddStageTime(-1)
 		Game.AddObjective("goto")
 			Game.SetDestination("m5_poster3","triggersphere")
 		Game.CloseObjective()
-		Game.AddCondition( "damage" )
-			Game.SetCondMinHealth( 0.0 )
-			Game.SetCondTargetVehicle( "current" )
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
-		Game.CloseCondition()
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
+		StandardConditions()
+		RetainTimer()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	
 	Game.AddStage()
 		Game.DisableTrigger("Poster3Loc")
-		if Mode.IsNormal then
-		Game.SetMaxTraffic(3)
-		else
-		Game.SetMaxTraffic(4)
-		end
+		TrafficDifficulty()
 		Game.SetStageMessageIndex(06)
 		Game.SetHUDIcon("w_billb3")
 		Game.AddObjective("insidetrigger")
@@ -313,9 +245,7 @@ Game.SelectMission("m5")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.AddStageTime(-1)
-		Game.AddCondition("timeout")
-		Game.CloseCondition()
+		RetainTimer()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
 	

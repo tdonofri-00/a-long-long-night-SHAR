@@ -1,3 +1,15 @@
+local timeLimit = {60, 60}
+
+local function StandardConditions()
+	Game.AddCondition("outofvehicle")
+		Game.SetCondTime( 10000 )
+	Game.CloseCondition()
+	Game.AddCondition( "damage" )
+		Game.SetCondMinHealth( 0.0 )
+		Game.SetCondTargetVehicle( "current" )
+	Game.CloseCondition()
+end
+
 Game.SelectMission("m0")
 
 	Game.SetMissionResetPlayerInCar("m0_carstart_2")
@@ -27,7 +39,9 @@ Game.SelectMission("m0")
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.SetStageTime(25)
+		timeLimit[Mode.NormalMode] = 30
+		timeLimit[Mode.HardMode] = 20
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
@@ -71,8 +85,15 @@ Game.SelectMission("m0")
 	Game.AddStage()
 		Game.SetStageMessageIndex(03)
 		Game.SetHUDIcon("w_kbmeal")
+		--[[
 		Game.AddObjective("goto")
 			Game.SetDestination("m0_kburger2","kmeal")
+		Game.CloseObjective()
+		]]
+		Game.AddObjective("delivery", "neither")
+			for i=1, 4 do
+			Game.AddCollectible("m0_kmeal" .. i,"kmeal")
+			end
 		Game.CloseObjective()
 		Game.SetStageMusicAlwaysOn()
 	Game.CloseStage()
@@ -82,7 +103,9 @@ Game.SelectMission("m0")
 		Game.AddObjective("getin")
 			Game.SetObjTargetVehicle("current")
 		Game.CloseObjective()
-		Game.SetStageTime(50)
+		timeLimit[Mode.NormalMode] = 50
+		timeLimit[Mode.HardMode] = 40
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetStageMusicAlwaysOn()
@@ -119,11 +142,9 @@ Game.SelectMission("m0")
 			end
 			Game.SetCollectibleEffect("wrench_collect")
 		Game.CloseObjective()
-		if Mode.IsNormal then
-		Game.SetStageTime(35)
-		else
-		Game.SetStageTime(25)
-		end
+		timeLimit[Mode.NormalMode] = 35
+		timeLimit[Mode.HardMode] = 25
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.AddCondition( "damage" )
@@ -143,14 +164,13 @@ Game.SelectMission("m0")
 			Game.AddStageVehicle("homer_v","m0_homer","NULL","Missions\\level01\\M0chase.con", "homer")
 			Game.AddStageVehicle("snake_v","m0_snake_car","NULL","snake_v.con")
 		Game.CloseObjective()
-		Game.AddCondition("outofvehicle")
-		Game.SetCondTime( 10000 )
-		Game.CloseCondition()
 		Game.AddCondition( "damage" )
 			Game.SetCondMinHealth( 0.0 )
 			Game.SetCondTargetVehicle( "current" )
 		Game.CloseCondition()
-		Game.SetStageTime(70)
+		timeLimit[Mode.NormalMode] = 60
+		timeLimit[Mode.HardMode] = 45
+		Game.SetStageTime(timeLimit[Mode.Current])
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 		Game.SetCompletionDialog("dad","homer")
@@ -186,9 +206,6 @@ Game.SelectMission("m0")
 		Game.CloseObjective()
 		Game.AddStageTime(30)
 		Game.AddCondition("timeout")
-		Game.CloseCondition()
-		Game.AddCondition("outofvehicle")
-			Game.SetCondTime( 10000 )
 		Game.CloseCondition()
 		Game.AddCondition( "damage" )
 			Game.SetCondMinHealth( 0.0 )

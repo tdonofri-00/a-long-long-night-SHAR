@@ -1,6 +1,5 @@
 -- Mission P3D
-Game.LoadP3DFile("art\\missions\\level01\\m1.p3d")
-Game.LoadP3DFile("art\\missions\\level01\\m1_cam_sd.p3d")
+Game.LoadP3DFile("art\\missions\\level01\\m1sd.p3d")
 -- Cars
 Game.LoadDisposableCar("art\\cars\\snake_v.p3d","snake_v","AI") 
 Game.LoadDisposableCar("art\\cars\\black.p3d","black","AI")

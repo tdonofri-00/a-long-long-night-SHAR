@@ -1,31 +1,30 @@
-local function L1M1EnableHints()
-	if Mode.IsHard then
-	Game.SetNumValidFailureHints( 5 )
-	else
-	Game.SetNumValidFailureHints( 4 )
-	end
-end
-
-local function StandardConditions()
-	Game.AddCondition("outofvehicle")
-		Game.SetCondTime( 10000 )
-	Game.CloseCondition()
-	Game.AddCondition( "damage" )
-		Game.SetCondMinHealth( 0.0 )
-		Game.SetCondTargetVehicle( "current" )
-	Game.CloseCondition()
-end
-
 Game.SelectMission("m1")
 
 	Game.SetMissionResetPlayerInCar("m1_car_loc")
 	Game.SetDynaLoadData("l5z4.p3d;l5r3.p3d;l5r4.p3d;")
 	Game.StreetRacePropsLoad("l1m1_baracade.p3d;") -- Barracade
-	Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
+	--Game.StreetRacePropsUnload("l1m1_baracade.p3d:") -- Barracade
 	Game.SetPedsEnabled(1)
 
 	Game.UsePedGroup(5)
-	L1M1EnableHints()
+	Game.SetNumValidFailureHints( Mode.FailHintCount )
+
+	if GetSetting("ScrapBookMode") then
+		Game.AddStage()
+			Game.RESET_TO_HERE()
+			Game.NoTrafficForStage()
+			Game.PlacePlayerCar("current", "m1_car_loc")
+			Game.PutMFPlayerInCar( )
+			Game.AddStageVehicle("snake_v","m1_snake_preview","NULL","Missions\\level01\\M1dest.con", "snake")
+			Game.AddStageVehicle("yellow","m1_accomplice1_preview","NULL","Missions\\level01\\M1dest2.con", "male1")
+			Game.AddStageVehicle("black","m1_accomplice2_preview","NULL","Missions\\level01\\M1dest3.con", "joger2")
+			Game.AddObjective("dummy")
+				Game.AddNPC("snake","m0_npd_sd") -- Hide NPC
+			Game.CloseObjective()
+		Game.CloseStage()
+		Game.CloseMission()
+		return
+	end
 
 	Game.AddStage()
 		Game.RESET_TO_HERE()
@@ -35,11 +34,7 @@ Game.SelectMission("m1")
 		Game.AddToCountdownSequence( "1", 800 ) -- duration time in milliseconds
 		Game.AddToCountdownSequence( "GO", 400 ) -- duration time in milliseconds
 		Game.SetStageMessageIndex(4)
-		if Mode.IsNormal then
 		Game.SetMaxTraffic(2)
-		else
-		Game.SetMaxTraffic(3)
-		end
 		Game.SetHUDIcon( "w_snakec" )
 		Game.PlacePlayerCar("current", "m1_car_loc")
 		Game.PutMFPlayerInCar( )
@@ -50,7 +45,9 @@ Game.SelectMission("m1")
 		end
 		]]
 		Game.SetVehicleAIParams( "snake_v", -10, -9 )
+		Game.AddStageWaypoint( "m1_waypointS_0" )
 		Game.AddStageWaypoint( "m1_waypointS_1" )
+		Game.AddStageWaypoint( "m1_waypointS_1a" )
 		Game.AddStageWaypoint( "m1_waypointS_2" )
 		Game.AddStageWaypoint( "m1_waypointS_3" )
 		Game.AddStageWaypoint( "m1_dmv_fail" )
@@ -62,17 +59,17 @@ Game.SelectMission("m1")
 		Game.AddCondition("race")
 			Game.SetCondTargetVehicle("snake_v")
 		Game.CloseCondition()
-		StandardConditions()
+		SurviveConditions()
 	Game.CloseStage()
 
 	Game.AddStage()
 		Game.SetHUDIcon("w_lexicon")
 		Game.SetStageMessageIndex(05)
 		Game.AddObjective("goto")
-			Game.SetDestination("m1_accomplice1_goto","carsphere")
+			Game.SetDestination("m1_accomplice1_goto","upwardglow")
 			Game.AddStageVehicle("yellow","m1_accomplice1","NULL","Missions\\level01\\M1dest2.con", "male1")
 		Game.CloseObjective()
-		StandardConditions()
+		SurviveConditions()
 		Game.ShowStageComplete() -- Checkpoint Notification
 	Game.CloseStage()
 
@@ -89,10 +86,10 @@ Game.SelectMission("m1")
 		
 		Game.AddObjective("dump")
 			Game.SetObjTargetVehicle("yellow")
-			Game.AddCollectible("m1_stuff2","lasergun")
+			Game.AddCollectible("m1_stuff2","cd")
 		Game.CloseObjective()
-		StandardConditions()
-		Game.SetStageTime(90)
+		SurviveConditions()
+		Game.SetStageTime(90)	-- i have a better idea for adjusting difficulty. this helps makes Hard mode
 		Game.AddCondition("timeout")
 		Game.CloseCondition()
 	Game.CloseStage()
@@ -101,10 +98,10 @@ Game.SelectMission("m1")
 		Game.SetHUDIcon("w_kburg")
 		Game.SetStageMessageIndex(7)
 		Game.AddObjective("goto")
-			Game.SetDestination("m1_accomplice2_goto","carsphere")
+			Game.SetDestination("m1_accomplice2_goto","upwardglow")
 			Game.AddStageVehicle("black","m1_accomplice2","NULL","Missions\\level01\\M1dest3.con", "joger2")
 		Game.CloseObjective()
-		StandardConditions()
+		SurviveConditions()
 		Game.ShowStageComplete() -- Checkpoint Notification
 	Game.CloseStage()
 
@@ -115,6 +112,7 @@ Game.SelectMission("m1")
 		Game.SetStageMessageIndex(6)
 		Game.SetHUDIcon("w_black")
 		Game.ActivateVehicle("black","NULL","target")
+		--[[
 		-- holy shit look at all those waypoints. does this stage really need that many?
 		-- Basic route
 		Game.AddStageWaypoint("m1_wp_0")
@@ -148,11 +146,17 @@ Game.SelectMission("m1")
 		Game.AddStageWaypoint("m1_wp_3b")
 		Game.AddStageWaypoint("m1_wp_4")
 		-- End of waypoints
+		]]
+		
+		-- simplified
+		for i=1, 8 do
+			Game.AddStageWaypoint("m1_waypoint2-" .. i)
+		end
 		Game.AddObjective("dump")
 			Game.SetObjTargetVehicle("black")
 			Game.AddCollectible("m1_stuff2","blankbox")
 		Game.CloseObjective()
-		StandardConditions()
+		SurviveConditions()
 		Game.SetStageTime(90)
 		Game.AddCondition("timeout")
 		Game.CloseCondition()

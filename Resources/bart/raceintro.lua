@@ -1,0 +1,1 @@
+Redirect("/GameData/conversations/bart_raceintro_" .. math.random(1,3) .. ".ogg")

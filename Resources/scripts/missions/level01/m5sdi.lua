@@ -6,12 +6,12 @@ Game.SelectMission("m5sd")
 	Game.UsePedGroup(5)
 
 	Game.AddStage()
-		Game.SetHUDIcon("w_fone")
+		Game.SetHUDIcon("w_java")
 		Game.SetStageMessageIndex(01)
 		Game.SetMaxTraffic(5)
 		Game.AddObjective("goto")
 			--Game.SetDestination("m5_hospital","carsphere")
-			Game.SetDestination("m0_phone_sd","carsphere")
+			Game.SetDestination("m0_phone_sd","upwardglow")
 		Game.CloseObjective()
 	Game.CloseStage()
 
@@ -21,16 +21,15 @@ Game.SelectMission("m5sd")
 		Game.SetStageMessageIndex(02)
 		Game.SetMaxTraffic(5)
 		Game.AddObjective("goto")
-			Game.AddNPC("npd","m0_npd_sd")
+			Game.AddNPC("npd","hidden_npc")
 			Game.SetDestination("m0_phone_loc_sd","triggersphere")
 			Game.MustActionTrigger()
 			Game.SetCollectibleEffect("none")
 		Game.CloseObjective()
 	Game.CloseStage()
 	
-Output([[
-    AddStage("locked", "car", "billbord");
-]])
+
+    Game.AddStage("locked", "car", "billbord")
 		Game.AddObjective("dialogue")
 			Game.SetStageMessageIndex(9)
 			Game.SetPresentationBitmap( "art/frontend/dynaload/images/mis01_05.p3d" )
@@ -55,23 +54,26 @@ Output([[
 		Game.CloseObjective()
 	Game.CloseStage()
 	
-		Game.AddStage()
+	--[[
+	Game.AddStage()
 		Game.AddObjective("timer")
 			Game.SetDurationTime(0.5)
 		Game.CloseObjective()
 	Game.CloseStage()
+	]]
 
 	Game.AddStage()
 		Game.SetHUDIcon("w_billcr")
 		Game.SetStageMessageIndex(11)
 		Game.AddObjective("buycar","billbord")
+			Game.RemoveNPC("npd")
 		Game.CloseObjective()
 	Game.CloseStage()
-
+	--[[
 	Game.AddStage()
 		Game.AddObjective("timer")
-			Game.SetDurationTime(0.1)
+			Game.SetDurationTime(0.5)
 		Game.CloseObjective()
 	Game.CloseStage()
-
+	]]
 Game.CloseMission()

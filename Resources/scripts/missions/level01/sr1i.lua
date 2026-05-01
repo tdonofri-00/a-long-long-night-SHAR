@@ -1,0 +1,53 @@
+Game.SelectMission("sr1")
+
+	Game.SetMissionResetPlayerInCar("sr1_carstart")
+	Game.SetDynaLoadData("l5z3.p3d;l5r2.p3d;l5r3.p3d;")
+
+	Game.UsePedGroup(0)
+
+	Game.StreetRacePropsLoad("l1_sr1p.p3d;l1m1_baracade.p3d:")
+	Game.StreetRacePropsUnload("l1_sr1p.p3d:")
+
+	Game.SetNumValidFailureHints( Mode.FailHintCount )
+	
+	Game.SetAnimatedCameraName( "race1camShape" )
+	Game.SetAnimCamMulticontName( "race1cam" )
+	
+	Game.AddStage("final")
+		Game.DisableHitAndRun()
+		Game.SetStagePayout(50)
+		Game.StartCountdown("")
+			Game.AddToCountdownSequence("3", 1000)
+			Game.AddToCountdownSequence("2", 1000)
+			Game.AddToCountdownSequence("1", 1000)
+			Game.AddToCountdownSequence("DRIVE", 400)
+		Game.PlacePlayerCar("current", "sr1_carstart")
+		Game.PutMFPlayerInCar( )
+		Game.NoTrafficForStage()
+		Game.SetStageMessageIndex(2)
+		Game.SetHUDIcon("w_flag")
+		SetTimeByDifficulty(84, 76)
+		Game.AddObjective("race", "neither")
+			for i= 1,11 do
+			Game.AddCollectible("sr1_waypoint"..i,"upwardglow_b")
+			end
+		Game.CloseObjective()
+		Game.AddCondition("timeout")
+		Game.CloseCondition()
+		Game.AddCondition("insidetrigger")
+			Game.SetCondTrigger("sr1_ohlookyouwentoutofbounds")
+			Game.SetCondSound("sr1_oob3")
+		Game.CloseCondition()
+		Game.AddCondition("insidetrigger")
+			Game.SetCondTrigger("sr1_ohlookyouwentoutofbounds2")
+			Game.SetCondSound("sr1_oob2")
+		Game.CloseCondition()
+		Game.AddCondition("insidetrigger")
+			Game.SetCondTrigger("sr1_ohlookyouwentoutofbounds3")
+			Game.SetCondSound("sr1_oob1")
+		Game.CloseCondition()
+		SurviveConditions()
+		Game.GoToPsScreenWhenDone()
+	Game.CloseStage()
+	
+Game.CloseMission()

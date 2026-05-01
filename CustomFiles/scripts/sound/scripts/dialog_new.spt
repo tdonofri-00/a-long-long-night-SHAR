@@ -1,0 +1,700 @@
+create daSoundResourceData named C_phone1_1_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone1_1_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_2_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone1_2_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_3_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone1_3_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_4_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone1_4_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_5_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone1_5_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_6_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone1_6_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone1_7_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone1_7_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_phone2_1_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone2_1_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone2_2_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone2_2_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_phone_1_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone_1_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone_2_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone_2_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone_3_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone_3_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone_4_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone_4_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone_5_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone_5_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone_6_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone_6_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_order_1_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_order_1_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_order_2_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_order_2_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_order_3_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_order_3_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_order_4_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_order_4_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_order_5_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_order_5_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_dad_1_noboxconv_hom_l1
+{
+    AddFilename ( "conversations/C_dad_1_noboxconv_hom_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_dad_2_noboxconv_brt_l1
+{
+    AddFilename ( "conversations/C_dad_2_noboxconv_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_dad2_1_noboxconv_hom_l1
+{
+    AddFilename ( "conversations/C_dad2_1_noboxconv_hom_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone2_1_convinit_npd_l1
+{
+    AddFilename ( "conversations/C_phone2_1_convinit_npd_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone2_2_convinit_brt_l1
+{
+    AddFilename ( "conversations/C_phone2_2_convinit_brt_l1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_handover_1_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_handover_1_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_handover_2_convinit_snk_l1m1
+{
+    AddFilename ( "conversations/C_handover_2_convinit_snk_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_handover_3_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_handover_3_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_mugging_1_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_mugging_1_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_mugging_2_convinit_snk_l1m1
+{
+    AddFilename ( "conversations/C_mugging_2_convinit_snk_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_mugging_3_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_mugging_3_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_mugging_4_convinit_snk_l1m1
+{
+    AddFilename ( "conversations/C_mugging_4_convinit_snk_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_mugging_5_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_mugging_5_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_barthitbyc_1_noboxconv_brt_l1m1
+{
+    AddFilename ( "conversations/C_barthitbyc_1_noboxconv_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_barthitbyc_2_noboxconv_snk_l1m1
+{
+    AddFilename ( "conversations/C_barthitbyc_2_noboxconv_snk_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_crime_1_convinit_wig_l1m1
+{
+    AddFilename ( "conversations/C_crime_1_convinit_wig_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_crime_2_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_crime_2_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_crime_3_convinit_wig_l1m1
+{
+    AddFilename ( "conversations/C_crime_3_convinit_wig_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_crime_4_convinit_brt_l1m1
+{
+    AddFilename ( "conversations/C_crime_4_convinit_brt_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_crime_5_convinit_wig_l1m1
+{
+    AddFilename ( "conversations/C_crime_5_convinit_wig_l1m1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone3_1_convinit_npd_l1m2
+{
+    AddFilename ( "conversations/C_phone3_1_convinit_npd_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone3_2_convinit_brt_l1m2
+{
+    AddFilename ( "conversations/C_phone3_2_convinit_brt_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone3_3_convinit_npd_l1m2
+{
+    AddFilename ( "conversations/C_phone3_3_convinit_npd_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone3_4_convinit_brt_l1m2
+{
+    AddFilename ( "conversations/C_phone3_4_convinit_brt_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone3_5_convinit_npd_l1m2
+{
+    AddFilename ( "conversations/C_phone3_5_convinit_npd_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_wedding_1_convinit_npd_l1m2
+{
+    AddFilename ( "conversations/C_wedding_1_convinit_npd_l1m2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_glass_1_noboxconv_brt_L1M2
+{
+    AddFilename ( "conversations/C_glass_1_noboxconv_brt_L1M2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_angryarrive_1_noboxconv_brt_L1M2
+{
+    AddFilename ( "conversations/C_angryarrive_1_noboxconv_brt_L1M2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_angryleave_1_noboxconv_brt_L1M2
+{
+    AddFilename ( "conversations/C_angryleave_1_noboxconv_brt_L1M2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_helpkrusty_1_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_helpkrusty_1_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_helpkrusty_2_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_helpkrusty_2_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_helpkrusty_3_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_helpkrusty_3_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_helpkrusty_4_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_helpkrusty_4_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_helpkrusty_5_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_helpkrusty_5_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_krustylied_1_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_1_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustylied_2_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_2_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustylied_3_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_3_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustylied_4_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_4_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustylied_5_convinit_hbn_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_5_convinit_hbn_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustylied_6_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_krustylied_6_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+
+create daSoundResourceData named C_party1_1_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_party1_1_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_party1_2_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_party1_2_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_party1_3_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_party1_3_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_party1_4_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_party1_4_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_party1_5_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_party1_5_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_doing_1_noboxconv_brt_l1m3
+{
+    AddFilename ( "conversations/C_doing_1_noboxconv_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_kkk_1_noboxconv_brt_l1m3
+{
+    AddFilename ( "conversations/C_kkk_1_noboxconv_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krusty_1_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_krusty_1_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krusty_2_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_krusty_2_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krusty_3_convinit_brt_l1m3
+{
+    AddFilename ( "conversations/C_krusty_3_convinit_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krusty_4_convinit_kru_l1m3
+{
+    AddFilename ( "conversations/C_krusty_4_convinit_kru_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_popcorn_1_noboxconv_brt_l1m3
+{
+    AddFilename ( "conversations/C_popcorn_1_noboxconv_brt_l1m3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_homerinterrupt_1_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_homerinterrupt_1_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+
+create daSoundResourceData named C_homerwantin_1_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_1_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_2_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_2_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_3_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_3_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_4_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_4_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_5_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_5_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_6_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_6_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerwantin_7_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_homerwantin_7_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_duff_1_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_duff_1_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_duff_2_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_duff_2_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_duff_3_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_duff_3_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_duff_4_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_duff_4_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_enough_1_convinit_brt_l1m4
+{
+    AddFilename ( "conversations/C_enough_1_convinit_brt_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_enough_2_convinit_hom_l1m4
+{
+    AddFilename ( "conversations/C_enough_2_convinit_hom_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_ambush_1_noboxconv_wig_l1m4
+{
+    AddFilename ( "conversations/C_ambush_1_noboxconv_wig_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_escape_1_noboxconv_wig_l1m4
+{
+    AddFilename ( "conversations/C_escape_1_noboxconv_wig_l1m4.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_phone4_1_convinit_npd_l1m5
+{
+    AddFilename ( "conversations/C_phone4_1_convinit_npd_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_nobeer_1_noboxconv_moe_l1m5
+{
+    AddFilename ( "conversations/C_nobeer_1_noboxconv_moe_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_notv_1_noboxconv_moe_l1m5
+{
+    AddFilename ( "conversations/C_notv_1_noboxconv_moe_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_spray_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_spray_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_spray2_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_spray2_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_limoarrive_1_noboxconv_brt_L1M5
+{
+    AddFilename ( "conversations/C_limoarrive_1_noboxconv_brt_L1M5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustyarrive_1_noboxconv_brt_L1M5
+{
+    AddFilename ( "conversations/C_krustyarrive_1_noboxconv_brt_L1M5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_barthitbycagain_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_barthitbycagain_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_life_1_convinit_wig_l1m5
+{
+    AddFilename ( "conversations/C_life_1_convinit_wig_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_life_2_convinit_brt_l1m5
+{
+    AddFilename ( "conversations/C_life_2_convinit_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_life2_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_life2_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustybetrayal_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_krustybetrayal_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_wiggumhitbyc_1_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_wiggumhitbyc_1_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerleave_1_noboxconv_hom_l1m5
+{
+    AddFilename ( "conversations/C_homerleave_1_noboxconv_hom_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerleave_2_noboxconv_brt_l1m5
+{
+    AddFilename ( "conversations/C_homerleave_2_noboxconv_brt_l1m5.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_wiggumleave_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_wiggumleave_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_breakout_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_breakout_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_homerthanks_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_homerthanks_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_stinkbomb_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_stinkbomb_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_stinkbomb2_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_stinkbomb2_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_stinkbomb3_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_stinkbomb3_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_removetape_1_noboxconv_brt_l1m6
+{
+    AddFilename ( "conversations/C_removetape_1_noboxconv_brt_l1m6.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_snakeagain_1_noboxconv_brt_l1m7
+{
+    AddFilename ( "conversations/C_snakeagain_1_noboxconv_brt_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_snakeagain_2_noboxconv_snk_l1m7
+{
+    AddFilename ( "conversations/C_snakeagain_2_noboxconv_snk_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_krustyarena_1_noboxconv_brt_l1m7
+{
+    AddFilename ( "conversations/C_krustyarena_1_noboxconv_brt_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_limoarena_1_noboxconv_brt_l1m7
+{
+    AddFilename ( "conversations/C_limoarena_1_noboxconv_brt_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_gators_1_noboxconv_brt_l1m7
+{
+    AddFilename ( "conversations/C_gators_1_noboxconv_brt_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_leavearena_1_noboxconv_brt_l1m7
+{
+    AddFilename ( "conversations/C_leavearena_1_noboxconv_brt_l1m7.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_attenders1_1_noboxconv_brt_L1
+{
+    AddFilename ( "conversations/C_attenders1_1_noboxconv_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_attenders2_1_noboxconv_brt_L1
+{
+    AddFilename ( "conversations/C_attenders2_1_noboxconv_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_welcome_1_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_welcome_1_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_intro_1_convinit_brt_L1R1
+{
+    AddFilename ( "conversations/C_intro_1_convinit_brt_L1R1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_intro_1_convinit_brt_L1R2
+{
+    AddFilename ( "conversations/C_intro_1_convinit_brt_L1R2.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_intro_1_convinit_brt_L1R3
+{
+    AddFilename ( "conversations/C_intro_1_convinit_brt_L1R3.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_muchapu_1_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_muchapu_1_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_1_convinit_apu_L1
+{
+    AddFilename ( "conversations/C_apuparty_1_convinit_apu_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_2_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_apuparty_2_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_3_convinit_apu_L1
+{
+    AddFilename ( "conversations/C_apuparty_3_convinit_apu_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_4_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_apuparty_4_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_5_convinit_apu_L1
+{
+    AddFilename ( "conversations/C_apuparty_5_convinit_apu_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_6_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_apuparty_6_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_7_convinit_apu_L1
+{
+    AddFilename ( "conversations/C_apuparty_7_convinit_apu_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_8_convinit_brt_L1
+{
+    AddFilename ( "conversations/C_apuparty_8_convinit_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_apuparty_9_convinit_apu_L1
+{
+    AddFilename ( "conversations/C_apuparty_9_convinit_apu_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_rivalagain_1_noboxconv_brt_L1B1
+{
+    AddFilename ( "conversations/C_rivalagain_1_noboxconv_brt_L1B1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_oneminute_1_noboxconv_brt_L1B1
+{
+    AddFilename ( "conversations/C_oneminute_1_noboxconv_brt_L1B1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_rivalhitbyc_1_noboxconv_brt_L1B1
+{
+    AddFilename ( "conversations/C_rivalhitbyc_1_noboxconv_brt_L1B1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_coolcar_1_noboxconv_brt_L1B1
+{
+    AddFilename ( "conversations/C_coolcar_1_noboxconv_brt_L1B1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named C_ty2count_1_noboxconv_brt_L1
+{
+    AddFilename ( "conversations/C_ty2count_1_noboxconv_brt_L1.rsd" 1.000000 )
+    SetStreaming ( true )
+}
+create daSoundResourceData named W_Idlereply_Dom_01
+{
+    AddFilename ( "Dom/W_Idlereply_Dom_01.rsd" 1.000000 )
+    SetStreaming ( true )
+}

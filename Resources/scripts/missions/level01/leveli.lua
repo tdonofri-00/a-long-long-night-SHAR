@@ -1,6 +1,9 @@
 Game.EnableTutorialMode( false )
-
-Game.InitLevelPlayerVehicle("lambo","level1_carstart","DEFAULT")
+if GetSetting("TestKEMTruck") then
+	Game.InitLevelPlayerVehicle("kwik_v","level1_carstart","DEFAULT")
+else
+	Game.InitLevelPlayerVehicle("lambo","level1_carstart","DEFAULT")
+end
 
 Game.AddCharacter("bart","bart")
 
@@ -13,78 +16,94 @@ Game.ClearAmbientAnimations( "sr2" )
 Game.ClearAmbientAnimations( "sr3" )
 Game.ClearAmbientAnimations( "bm1" )
 
---Game.AddNPCCharacterBonusMission("milhouse", "npd", "sr1_mhouse_sd", "sr1", "checkered", "intro", 0, "checkeredfinish" )
---Game.SetBonusMissionDialoguePos("sr1","sr1_apu","sr1_mhouse_sd","sr1_apucar")
+Game.AddNPCCharacterBonusMission("milhouse", "npd", "sr1_mhouse_sd", "sr1", "checkered", "intro", 0, "checkeredfinish" )
+Game.SetBonusMissionDialoguePos("sr1", "sr1_bart_talk", "sr1_mhouse_sd", "sr1_car_talk")
+	
 	Game.SetConversationCam( 0, "pc_near",				"sr1" )
-	Game.SetConversationCam( 1, "npc_far",				"sr1" )
-	Game.SetConversationCam( 2, "pc_near",				"sr1" )
-	Game.SetConversationCam( 3, "npc_far",				"sr1" )
+	Game.AddAmbientNpcAnimation( "none",				"sr1" )
+	Game.AddAmbientPcAnimation( "dialogue_shaking_fist",	"sr1" )
 	
-	Game.AddAmbientNpcAnimation( "none",					"sr1" )
-	Game.AddAmbientNpcAnimation( "dialogue_shaking_fist",		"sr1" )
-	Game.AddAmbientNpcAnimation( "none",					"sr1" )
-	Game.AddAmbientNpcAnimation( "dialogue_cross_arms",			"sr1" )
+	Game.SetCamBestSide("sr1_bestside",				"sr1" )
 	
-	Game.AddAmbientPcAnimation( "none",					"sr1" )
-	Game.AddAmbientPcAnimation( "none",					"sr1" )
-	Game.AddAmbientPcAnimation( "dialogue_hands_in_air",			"sr1" )
-	Game.AddAmbientPcAnimation( "none",					"sr1" )
+	Game.AddBonusMissionNPCWaypoint("milhouse", "sr1_mhouse_walk1")
+	Game.AddBonusMissionNPCWaypoint("milhouse", "sr1_mhouse_walk2")
 
---Game.AddNPCCharacterBonusMission("nelson", "npd", "sr2_nelson_sd", "sr2", "checkered", "intro", 0, "checkeredfinish" )
---Game.SetBonusMissionDialoguePos("sr2","sr2_apu","sr2_nelson_sd","sr2_apucar")
+Game.AddNPCCharacterBonusMission("nelson", "npd", "sr2_nelson_sd", "sr2", "checkered", "intro", 0, "checkeredfinish" )
+Game.SetBonusMissionDialoguePos("sr2", "sr2_bart_talk", "sr2_nelson_sd", "sr2_car_talk")
+
 	Game.SetConversationCam( 0, "pc_near",				"sr2" )
-	Game.SetConversationCam( 1, "npc_far",				"sr2" )
+	Game.AddAmbientNpcAnimation( "none",				"sr2" )
+	Game.AddAmbientPcAnimation( "dialogue_shaking_fist",	"sr2" )
 	
-	Game.AddAmbientNpcAnimation( "none",					"sr2" )
-	Game.AddAmbientNpcAnimation( "dialogue_shaking_fist",		"sr2" )
+	Game.SetCamBestSide("sr2_bestside",				"sr2" )
 	
-	Game.AddAmbientPcAnimation( "dialogue_thinking",			"sr2" )
-	Game.AddAmbientPcAnimation( "none",					"sr2" )
---Game.AddNPCCharacterBonusMission("ralph", "npd", "sr3_ralph_sd", "sr3", "checkered", "intro", 0, "checkeredfinish" )
---Game.SetBonusMissionDialoguePos("sr3","sr3_apu","sr3_ralph_sd","sr3_apucar")
+	Game.AddBonusMissionNPCWaypoint("nelson", "sr2_nelson_walk1")
+	Game.AddBonusMissionNPCWaypoint("nelson", "sr2_nelson_sd")
+
+Game.AddNPCCharacterBonusMission("ralph", "npd", "sr3_ralph_sd", "sr3", "checkered", "intro", 0, "checkeredfinish" )
+Game.SetBonusMissionDialoguePos("sr3","sr3_bart_talk","sr3_ralph_sd","sr3_car_talk")
+
 	Game.SetConversationCam( 0, "pc_near",				"sr3" )
-	Game.SetConversationCam( 1, "npc_far",				"sr3" )
+	Game.AddAmbientNpcAnimation( "none",				"sr3" )
+	Game.AddAmbientPcAnimation( "dialogue_shaking_fist",	"sr3" )
 	
-	Game.AddAmbientNpcAnimation( "none",					"sr3" )
-	Game.AddAmbientNpcAnimation( "dialogue_yes",				"sr3" )
+	Game.SetCamBestSide("sr3_bestside",				"sr3" )
 	
-	Game.AddAmbientPcAnimation( "dialogue_scratch_head",			"sr3" )
-	Game.AddAmbientPcAnimation( "none",					"sr3" )
---Game.AddNPCCharacterBonusMission("louie", "npd", "sr4_louie_sd", "gr1", "dice", "intro", 0 )
---Game.AddNPCCharacterBonusMission("frink", "npd", "bm1_frink_sd", "bm1", "exclamation", "hovercar", 1, "exclamation_shadow" )
+	Game.AddBonusMissionNPCWaypoint("ralph", "sr3_ralph_walk1")
+	Game.AddBonusMissionNPCWaypoint("ralph", "sr3_ralph_walk2")
+	
+Game.AddNPCCharacterBonusMission("louie", "npd", "sr4_louie_sd", "gr1", "dice", "intro", 0 )
+
+--replayable
+--Game.AddNPCCharacterBonusMission("apu", "npd", "bm1_apu_sd", "bm1", "exclamation", "muchapu", 0, "exclamation_shadow")
+Game.AddNPCCharacterBonusMission("apu", "npd", "bm1_apu_sd", "bm1", "exclamation", "apuparty", 0, "exclamation_alpha")
+	
+	Game.SetBonusMissionDialoguePos("bm1","bm1_bart_talk","bm1_apu_sd","bm_carstart")
+--Game.AddNPCCharacterBonusMission("apu", "npd", "bm1_apu_sd", "bm1", "exclamation", "muchapu", 1, "exclamation_shadow" )
+	
 	Game.SetConversationCam( 0, "npc_near",                        	"bm1" )	
-	Game.SetConversationCam( 1, "pc_far",                      		"bm1" )
+	Game.SetConversationCam( 1, "pc_near",                      	"bm1" )
 	Game.SetConversationCam( 2, "npc_far",                  		"bm1" )	
-	Game.SetConversationCam( 3, "pc_near",                        	"bm1" )
+	Game.SetConversationCam( 3, "npc_far",                        	"bm1" )
 	Game.SetConversationCam( 4, "npc_near",                        	"bm1" )
-	Game.SetConversationCam( 5, "pc_far",                        	"bm1" )
-	Game.SetConversationCam( 6, "pc_far",                        	"bm1" )	
+	Game.SetConversationCam( 5, "pc_far",                        	"bm1" )	--as said at a nearby gas station.
+	Game.SetConversationCam( 6, "npc_far",                        	"bm1" )	
+	Game.SetConversationCam( 7, "npc_far",                        	"bm1" )	
+	Game.SetConversationCam( 8, "npc_near",                        	"bm1" )	
 	
-	Game.AddAmbientNpcAnimation( "dialogue_open_arm_hand_gesture", 	"bm1" )
-	Game.AddAmbientNpcAnimation( "none", 				"bm1" )
-	Game.AddAmbientNpcAnimation( "dialogue_hands_in_air",		"bm1" )
-	Game.AddAmbientNpcAnimation( "none",                            	"bm1" )	
-	Game.AddAmbientNpcAnimation( "dialogue_cross_arms",              	"bm1" )
-	Game.AddAmbientNpcAnimation( "none", 				"bm1" )
 	Game.AddAmbientNpcAnimation( "dialogue_shake_hand_in_air",		"bm1" )
+	Game.AddAmbientNpcAnimation( "none", 							"bm1" )
+	Game.AddAmbientNpcAnimation( "nis_idle1",						"bm1" )
+	Game.AddAmbientNpcAnimation( "none",							"bm1" )	
+	Game.AddAmbientNpcAnimation( "dialogue_hands_in_air",			"bm1" )
+	Game.AddAmbientNpcAnimation( "none", 							"bm1" )
+	Game.AddAmbientNpcAnimation( "dialogue_no",						"bm1" )
+	Game.AddAmbientNpcAnimation( "none",							"bm1" )
+	Game.AddAmbientNpcAnimation( "dialogue_open_arm_hand_gesture",	"bm1" )
 	
-	Game.AddAmbientPcAnimation( "none",					"bm1" )
-	Game.AddAmbientPcAnimation( "dialogue_no",				"bm1" )
-	Game.AddAmbientPcAnimation( "none",					"bm1" )
-	Game.AddAmbientPcAnimation( "dialogue_shaking_fist",			"bm1" )
-	Game.AddAmbientPcAnimation( "none",					"bm1" )
-	Game.AddAmbientPcAnimation( "dialogue_yes",				"bm1" )
-	Game.AddAmbientPcAnimation( "none",					"bm1" )
-Game.AddBonusMissionNPCWaypoint("frink", "bm_frink_walk_1")
-Game.AddBonusMissionNPCWaypoint("frink", "bm_frink_walk_2")
-Game.AddBonusMissionNPCWaypoint("frink", "bm_frink_walk_1")
-Game.SetBonusMissionDialoguePos("bm1","bm1_apu","bm_frink_walk_1","bm1_carstart")
+	Game.AddAmbientPcAnimation( "none",							"bm1" )
+	Game.AddAmbientPcAnimation( "dialogue_shake_hand_in_air",	"bm1" )
+	Game.AddAmbientPcAnimation( "none",							"bm1" )
+	Game.AddAmbientPcAnimation( "dialogue_yes",					"bm1" )
+	Game.AddAmbientPcAnimation( "none",							"bm1" )
+	Game.AddAmbientPcAnimation( "dialogue_cross_arms",			"bm1" )
+	Game.AddAmbientPcAnimation( "none",							"bm1" )
+	Game.AddAmbientPcAnimation( "dialogue_hands_on_hips",		"bm1" )
+	Game.AddAmbientPcAnimation( "none",							"bm1" )
+	
+	Game.SetCamBestSide("bm_bestside_sd",					"bm1" )
+	
+	Game.AddBonusMissionNPCWaypoint("apu", "bm1_apu_walk1")
+	Game.AddBonusMissionNPCWaypoint("apu", "bm1_apu_sd")
+	Game.AddBonusMissionNPCWaypoint("apu", "bm1_apu_walk2")
+	Game.AddBonusMissionNPCWaypoint("apu", "bm1_apu_sd")
+
 
 --Game.AddING AMBIENT CHARACTERS
 	Game.AddAmbientCharacter("patty", "ambient_patty",  2.5)  --DMV
 	Game.AddAmbientCharacter("selma", "ambient_selma",  0)  --DMV
 
-	Game.AddAmbientCharacter("moe", "ambient_moe",  2.5)  --Moe's
+	Game.AddAmbientCharacter("moe", "ambient_moe",  1.2)  --Moe's
 
 
 	Game.AddAmbientCharacter("jasper", "ambient_jasper",  0)  --Zone4
@@ -100,8 +119,7 @@ Game.SetBonusMissionDialoguePos("bm1","bm1_apu","bm_frink_walk_1","bm1_carstart"
 
 	Game.AddAmbientCharacter("lenny", "ambient_lenny",  0)  --Zone2
 		Game.AddAmbientNPCWaypoint( "lenny", "lenny_walk1" )
-		Game.AddAmbientNPCWaypoint( "lenny", "lenny_walk2" )
-		Game.AddAmbientNPCWaypoint( "lenny", "lenny_walk1" )
+		Game.AddAmbientNPCWaypoint( "lenny", "ambient_lenny" )
 
 	Game.AddAmbientCharacter("grandpa", "ambient_grandpa",  0)  --Zone1
 		Game.AddAmbientNPCWaypoint( "grandpa", "grandpa_walk1" )
@@ -112,25 +130,32 @@ Game.SetBonusMissionDialoguePos("bm1","bm1_apu","bm_frink_walk_1","bm1_carstart"
 		Game.AddAmbientNPCWaypoint( "grandpa", "grandpa_walk2" )
 		Game.AddAmbientNPCWaypoint( "grandpa", "grandpa_walk1" )
 
-	Game.AddAmbientCharacter("ralph", "ambient_otto",  0)  --Zone3
-		Game.AddAmbientNPCWaypoint( "ralph", "ambient_otto" )
-		Game.AddAmbientNPCWaypoint( "ralph", "otto_walk1" )
-		Game.AddAmbientNPCWaypoint( "ralph", "ambient_otto" )
+	Game.AddAmbientCharacter("dom", "family",  1.2)  --Zone3
+		Game.AddAmbientNPCWaypoint( "dom", "family_walk1" )
+		Game.AddAmbientNPCWaypoint( "dom", "family" )
 	
 --Game.AddING PURCHASE POINTS FOR VEHICLES AND SKINS
 --
 Game.AddPurchaseCarReward( "gil", "gil", "npd", "gil_loc", 1.3, "gil_car" )
 Game.AddPurchaseCarNPCWaypoint("gil", "gil_walk1")
 Game.AddPurchaseCarReward( "simpson", "bill_sel", "npd", "billboard_sell", 1.3, "billboard_car" )
+Game.AddPurchaseCarNPCWaypoint("bill_sel", "billboard_sell_walk1")
+
+--if you didn't want lou to sell the promotion vehicle, then it's best if he was just an ambient character.
+--Game.AddPurchaseCarReward( "police", "pol_sell", "npd", "police_sell", 1.3, "police_car" )
 --Game.AddPurchaseCarNPCWaypoint("homer", "homer_walk1")
+
+Game.AddAmbientCharacter("lou", "ambient_lou", 0)
+	Game.AddAmbientNPCWaypoint("lou", "lou_walk1")
+	Game.AddAmbientNPCWaypoint("lou", "ambient_lou")
 
 --Game.AddING TRAFFIC GROUP FOR LEVEL 05--
 --
 Game.CreateTrafficGroup( 0 )
 	Game.AddTrafficModel( "sportsB",2 )
-	Game.AddTrafficModel( "cBone",1 )
+	Game.AddTrafficModel( "cBone",1,1 )
 	Game.AddTrafficModel( "ambul",1,1 )
-	Game.AddTrafficModel( "fishtruc",1,1 )
+	Game.AddTrafficModel( "fishtruc",1 )
 Game.CloseTrafficGroup( )
 
 --
@@ -206,8 +231,15 @@ Game.SetParticleTexture( 5, "cloud.tga" )	 -- paint chips when vehicle is damage
 Game.SetParticleTexture( 6, "halo.bmp" )	 -- Ring for shock wave fx.
 
 -- WASPS --/
-Game.PreallocateActors( "beecamera", "2" )
-Game.SetProjectileStats( "waspray", "80.0", "6" )
+Game.PreallocateActors( "beecamera", "3" )
+--Game.SetProjectileStats( "waspray", "80.0", "6" )
+Game.SetProjectileStats( "waspray", "80.0", "20" )
+
+Game.AddBehaviour( "beecamera", "EVADE_PLAYER", "1.0", "5.0", "1.0", "2.0", "10" )
+Game.AddBehaviour( "beecamera", "ATTRACTION", "5","15","5.0")
+Game.AddBehaviour( "beecamera", "ATTACK_PLAYER", "20.0", "3.0" , "3.0")
+Game.SetActorRotationSpeed( "beecamera", "150.0" )
+Game.AddShield( "beecamera", "beeshield" )
 
 -- Create a new spawn point called "catapult spawn point"
 -- When within a certain radius, specified by the 4th number, it will retrieve the stateprop
@@ -215,59 +247,82 @@ Game.SetProjectileStats( "waspray", "80.0", "6" )
 -- will be positioned at (xyz) location specified by the first 3 numbers
 -- Final value is unused at this point (eventually for timeout implementation)
 
---zone1
-Game.AddSpawnPointByLocatorScript("w_roof","beecamera","Shelley","w_roof","10.0","-1")
-Game.AddSpawnPointByLocatorScript("w_hospital","beecamera","Shelley","w_hospital","10.0","30")
-Game.AddSpawnPointByLocatorScript("w_museum","beecamera","Shelley","w_museum","20.0","30")
---rail1
---zone2
-Game.AddSpawnPointByLocatorScript("w_railstair","beecamera","Shelley","w_railstair","10.0","30")
-Game.AddSpawnPointByLocatorScript("w_rail2","beecamera","Shelley","w_rail2","10.0","20")
-Game.AddSpawnPointByLocatorScript("w_rail3","beecamera","Shelley","w_rail3","10.0","20")
---zone3
---rail3
---zone4
-Game.AddSpawnPointByLocatorScript("w_mono1","beecamera","Shelley","w_mono1","10.0","30")
-Game.AddSpawnPointByLocatorScript("w_mono4","beecamera","Shelley","w_mono4","10.0","30")
-Game.AddSpawnPointByLocatorScript("w_needle1","beecamera","Shelley","w_needle1","10.0","30")
-Game.AddSpawnPointByLocatorScript("w_needle2","beecamera","Shelley","w_needle2","10.0","-1")
---rail4
-Game.AddSpawnPointByLocatorScript("w_fountain","beecamera","Shelley","w_fountain","10.0","50")
-Game.AddBehaviour( "beecamera", "EVADE_PLAYER", "1.0", "5.0", "1.0", "2.0", "10" )
-Game.AddBehaviour( "beecamera", "ATTRACTION", "5","15","5.0")
-Game.AddBehaviour( "beecamera", "ATTACK_PLAYER", "20.0", "3.0" , "3.0")
-Game.SetActorRotationSpeed( "beecamera", "120.0" )
-Game.AddShield( "beecamera", "beeshield" )
---Zone 1
-Game.AddSpawnPointByLocatorScript("w_townhall","beecamera","Shelley","w_townhall","20.0","-1")
-Game.AddSpawnPointByLocatorScript("w_gazebo","beecamera","Shelley","w_gazebo","15.0","-1")
---Zone 2
-Game.AddSpawnPointByLocatorScript("w_legitroof","beecamera","Shelley","w_legitroof","15.0","60")
-Game.AddSpawnPointByLocatorScript("w_legitroof2","beecamera","Shelley","w_legitroof2","15.0","60")
-Game.AddSpawnPointByLocatorScript("w_moesroof","beecamera","Shelley","w_moesroof","15.0","-1")
---Rail 2
-Game.AddSpawnPointByLocatorScript("w_rail1","beecamera","Shelley","w_rail1","13.0","-1")
---Zone 3
---Zone 4
-Game.AddSpawnPointByLocatorScript("w_police","beecamera","Shelley","w_police","10.0","-1")
-Game.AddSpawnPointByLocatorScript("w_mono2","beecamera","Shelley","w_mono2","12.0","-1")
-Game.AddSpawnPointByLocatorScript("w_mono3","beecamera","Shelley","w_mono3","12.0","-1")
+local waspLocatorPrefixes = {"w_z1_roof", "w_r4_stad", "w_z2_legit", "w_r2_train", "w_z3_tns", "w_r3_express", "w_z4_mono"}
+local waspTriggerSize = {8, 10, 10, 10, 8, 20, 10}
+for i=1, #waspLocatorPrefixes do
+	for j=1, 3 do
+		local locatorName = waspLocatorPrefixes[i] .. j
+		Game.AddSpawnPointByLocatorScript(locatorName, "beecamera", "Shelley", locatorName, waspTriggerSize[i], "30")
+	end
+end
 
-Game.AddBehaviour( "w_townhall", "ATTACK_PLAYER", "15.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_townhall", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_gazebo", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_gazebo", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_legitroof", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_legitroof", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_legitroof2", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_legitroof2", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_moesroof", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_moesroof", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_rail1", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_rail1", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_police", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_police", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_mono2", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_mono2", "ATTRACTION", "2.0","20","-1")
-Game.AddBehaviour( "w_mono3", "ATTACK_PLAYER", "10.0", "5.0" , "-1.0")
-Game.AddBehaviour( "w_mono3", "ATTRACTION", "2.0","20","-1")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 1,	"ATTRACTION",		"5.0",	"8.0",	"6.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 1,	"EVADE_PLAYER", 	"3.0", 	"6.0", 	"1.0",	"2.0",	"3.0" )
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 2,	"ATTRACTION",		"5.0",	"11.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 2,	"EVADE_PLAYER", 	"3.0", 	"8.0", 	"1.0",	"2.0",	"4.0" )
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 3,	"ATTRACTION",		"10.0",	"15.0",	"2.0")
+Game.AddBehaviour( waspLocatorPrefixes[1] .. 3,	"EVADE_PLAYER", 	"5.0", 	"8.0", 	"1.0",	"2.0",	"5.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 1,	"ATTRACTION",		"3.0",	"6.0",	"4.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 1,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"3.0" )
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 2,	"ATTRACTION",		"5.0",	"11.0",	"4.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 2,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"4.0" )
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 3,	"ATTRACTION",		"8.0",	"15.0",	"4.0")
+Game.AddBehaviour( waspLocatorPrefixes[2] .. 3,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"5.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 1,	"ATTRACTION",		"3.0",	"8.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 1,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 2,	"ATTRACTION",		"5.0",	"11.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 2,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 3,	"ATTRACTION",		"8.0",	"15.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[3] .. 3,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 1,	"ATTRACTION",		"3.0",	"8.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 1,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 2,	"ATTRACTION",		"5.0",	"11.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 2,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 3,	"ATTRACTION",		"8.0",	"15.0",	"-1.0")
+Game.AddBehaviour( waspLocatorPrefixes[4] .. 3,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"-1.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 1,	"ATTRACTION",		"3.0",	"6.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 1,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"3.0" )
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 2,	"ATTRACTION",		"5.0",	"8.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 2,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"5.0" )
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 3,	"ATTRACTION",		"8.0",	"10.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[5] .. 3,	"EVADE_PLAYER", 	"2.0", 	"6.0", 	"1.0",	"2.0",	"7.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 1,	"ATTRACTION",		"3.0",	"6.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 1,	"EVADE_PLAYER", 	"4.0", 	"8.0", 	"1.0",	"2.0",	"3.0" )
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 2,	"ATTRACTION",		"5.0",	"8.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 2,	"EVADE_PLAYER", 	"4.0", 	"8.0", 	"1.0",	"2.0",	"5.0" )
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 3,	"ATTRACTION",		"8.0",	"10.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[6] .. 3,	"EVADE_PLAYER", 	"4.0", 	"8.0", 	"1.0",	"2.0",	"8.0" )
+
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 1,	"ATTACK_PLAYER",	"10.0",	"5.0",	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 1,	"ATTRACTION",		"3.0",	"6.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 1,	"EVADE_PLAYER", 	"1.0", 	"3.0", 	"1.0",	"2.0",	"8.0" )
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 2,	"ATTACK_PLAYER",	"15.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 2,	"ATTRACTION",		"5.0",	"8.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 2,	"EVADE_PLAYER", 	"3.0", 	"8.0", 	"1.0",	"2.0",	"10.0" )
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 3,	"ATTACK_PLAYER",	"20.0",	"5.0" ,	"1.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 3,	"ATTRACTION",		"8.0",	"10.0",	"8.0")
+Game.AddBehaviour( waspLocatorPrefixes[7] .. 3,	"EVADE_PLAYER", 	"4.0", 	"10.0", 	"1.0",	"2.0",	"12.0" )
+

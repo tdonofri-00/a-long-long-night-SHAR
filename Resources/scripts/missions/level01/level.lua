@@ -27,11 +27,13 @@ Game.LoadP3DFile("art\\cards.p3d")
 Game.LoadP3DFile("art\\wrench.p3d")
 Game.LoadP3DFile("art\\missions\\generic\\missgen.p3d")
 Game.LoadP3DFile("art\\missions\\generic\\dmv_door.p3d")
-Game.LoadP3DFile("art\\l05_fx.p3d","GMA_LEVEL_OTHER")
+--Game.LoadP3DFile("art\\l05_fx.p3d","GMA_LEVEL_OTHER")
+Game.LoadP3DFile("art\\l01_fx.p3d","GMA_LEVEL_OTHER")	--time to go nuts with the wasps
 Game.LoadP3DFile("art\\chars\\bart_kickwave.p3d")
 Game.LoadP3DFile("art\\chars\\bart_electrocuted.p3d")
 Game.LoadP3DFile("art\\missions\\level01\\l1_doors.p3d")
-Game.LoadP3DFile("art\\missions\\level01\\l1_cards.p3d")
+--Game.LoadP3DFile("art\\missions\\level01\\l1_cards.p3d")	--needs to be in region files or else it will break the illusion in m7's ending
+
 
 -- chase/harass vehicle
 Game.LoadP3DFile( "art\\cars\\cPolice.p3d" )
@@ -46,8 +48,11 @@ Game.LoadP3DFile("art\\missions\\level01\\jumps.p3d")
 Game.LoadP3DFile("art\\missions\\level01\\wasps.p3d")
 
 -- This is the level vehicle, always present
--- 
-Game.LoadDisposableCar( "art\\cars\\lambo.p3d","lambo","DEFAULT" )
+if GetSetting("TestKEMTruck") then
+	Game.LoadDisposableCar( "art\\cars\\kwik_v.p3d","kwik_v","DEFAULT" )
+else
+	Game.LoadDisposableCar( "art\\cars\\lambo.p3d","lambo","DEFAULT" )
+end
 
 -- Traffic vehicle models
 --
@@ -73,6 +78,66 @@ Game.SetStatepropShadow( "l5_parkinglight", "l5_streetlamp_lightpoolShape" )
 --Game.AddING INTERACTIVE GAGS FOR LEVEL 01
 --
 
+--Pickle Jar gag
+Game.GagBegin("gag_jar.p3d")
+Game.GagSetInterior("moe1")
+Game.GagSetCycle("reset")
+Game.GagSetPosition("Pickle")
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_jar")
+Game.GagSetTrigger("action", "PickleTrig", 1.5)
+Game.GagSetPersist(1)
+Game.GagSetCoins(1, -1)
+Game.GagEnd()
+
+--Flaming Moe gag
+Game.GagBegin("gag_flm.p3d")
+Game.GagSetInterior("moe1")
+Game.GagSetCycle("reset")
+Game.GagSetPosition("FlaMoe")
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_flm")
+Game.GagSetTrigger("action", "FlaMoeTrig", 1)
+Game.GagSetPersist(1)
+Game.GagSetCoins(1, -1)
+Game.GagEnd()
+
+--Duff poster gag
+Game.GagBegin("gag_duff.p3d")
+Game.GagSetInterior("moe1")
+Game.GagSetCycle("cycle")
+Game.GagSetPosition("Duff")
+Game.GagSetRandom(0)
+--GagSetSound("gag_???")
+Game.GagSetTrigger("touch", "DuffTrig", 2)
+Game.GagEnd()
+
+--Love tester Gag
+Game.GagBegin("gag_love.p3d")
+Game.GagSetInterior("moe1")
+Game.GagSetCycle("reset")
+Game.GagSetPosition("Love")
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_love")
+Game.GagSetTrigger("action", "LoveTrig", .75)
+Game.GagSetPersist(1)
+Game.GagSetCoins(1, -1)
+Game.GagEnd()
+
+--Slot Machine Gag
+Game.GagBegin("gag_slot.p3d")
+Game.GagSetInterior("moe1")
+Game.GagSetCycle("reset")
+Game.GagSetPosition("Slots")
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_slot")
+Game.GagSetTrigger("action", "SlotsTrig", .75)
+Game.GagSetPersist(1)
+Game.GagSetCoins(1, -1)
+Game.GagEnd()
+
+--no, we're not adding that moleman camera gag. there's almost no reason to go in the DMV.
+
 --Level 5 Dumpster Gag
 Game.GagBegin("l5_dump.p3d")
 Game.GagSetCycle("single")
@@ -80,23 +145,38 @@ Game.GagSetPosition(-47.669, 28.76, 393.687)
 Game.GagSetSparkle(1)
 Game.GagSetRandom(0)
 Game.GagSetSound("gag_lvl2_dumpster")
-Game.GagSetTrigger("action", -47.123, -28.76, 395.356, 2.4)
+Game.GagSetTrigger("action", -47.123, 28.76, 395.356, 2.4)
 Game.GagSetPersist(1)
 Game.GagSetCoins(1, -1)
 Game.GagEnd()
 
+--Cheese FMV gag
+Game.GagBegin("gag_tele.p3d")
+Game.GagPlayFMV("cheese.rmv")
+Game.GagSetCycle("reset")
+Game.GagSetPosition(-25.590, 36.510, 410.991)
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_loot")
+Game.GagSetTrigger("action", -25.590, 36.510, 410.991, 1.5)
+--Game.GagSetPersist(1)	--this will make it count toward the gag total. for an easter egg, it ruins its purpose. and people will complain on the forum.
+--Game.GagSetCoins(1, -1)
+Game.GagEnd()
+
+--Weasel FMV gag
+Game.GagBegin("gag_tele.p3d")
+Game.GagPlayFMV("weasel.rmv")
+Game.GagSetCycle("reset")
+Game.GagSetPosition(-452.3675, 20.5625, 582.3157)
+Game.GagSetRandom(0)
+Game.GagSetSound("gag_loot")
+Game.GagSetTrigger("action", -452.3675, 20.5625, 582.3157, 1.5)
+Game.GagEnd()
 
 --Game.Suppress Characters from being Drivers
 --
-Game.SuppressDriver("apu")
-Game.SuppressDriver("louie")
-Game.SuppressDriver("hibbert")
-Game.SuppressDriver("homer")
-Game.SuppressDriver("krusty")
-Game.SuppressDriver("wiggum")
-Game.SuppressDriver("snake")
 Game.SuppressDriver("bart")
---Game.SuppressDriver("frink") --bonus mission character
+Game.SuppressDriver("louie")
+Game.SuppressDriver("homer")
 Game.SuppressDriver("milhouse")
 Game.SuppressDriver("gil")
 Game.SuppressDriver("ralph")
@@ -104,12 +184,18 @@ Game.SuppressDriver("nelson")
 Game.SuppressDriver("patty")
 Game.SuppressDriver("selma")
 Game.SuppressDriver("barney")
---Game.SuppressDriver("moe")
 Game.SuppressDriver("jasper")
 Game.SuppressDriver("lenny")
 Game.SuppressDriver("grandpa")
 Game.SuppressDriver("otto")
 
+if not GetSetting("InvisibleBart") then
+	Game.SuppressDriver("krusty")
+	Game.SuppressDriver("wiggum")
+	Game.SuppressDriver("snake")
+	Game.SuppressDriver("mobstr")
+end
+
 
 --Game.Load DemoCams
-Game.LoadP3DFile("art\\missions\\level02\\democams.p3d")
+--Game.LoadP3DFile("art\\missions\\level02\\democams.p3d")

@@ -1,0 +1,73 @@
+create daSoundResourceData named power_coupling_smash
+{
+    SetStreaming ( true )
+    AddFilename ( "sound/soundfx/collect_soundfx/powerbox_smash_02.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named level_1_pickup_sfx
+{
+    SetStreaming ( true )
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_01.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_02.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_03.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_04.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_06.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+
+create daSoundResourceData named spotted_alert
+{
+    AddFilename ( "sound/soundfx/gameplay/short_siren.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named hidden_alert
+{
+    AddFilename ( "sound/soundfx/gameplay/short_siren_off.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named krusty_alert
+{
+    AddFilename ( "sound/soundfx/gameplay/krusty_alert.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named krusty_alert_off
+{
+    AddFilename ( "sound/carsound/horn-clown.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named sr1_oob1
+{
+    AddFilename ( "conversations/sr1_oob1.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named sr1_oob2
+{
+    AddFilename ( "conversations/sr1_oob2.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named sr1_oob3
+{
+    AddFilename ( "conversations/sr1_oob3.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}
+create daSoundResourceData named m8_set_bonus_movie_flag
+{
+    AddFilename ( "sound/soundfx/gameplay/m8_set_bonus_movie_flag.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+    SetStreaming ( true ) 
+}

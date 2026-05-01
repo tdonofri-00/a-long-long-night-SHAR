@@ -1,0 +1,315 @@
+create positionalSoundSettings named cows
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 25.000000 )
+    SetClipName ( "cows" )
+    SetPlaybackProbability ( 1.000000 )
+}
+
+create positionalSoundSettings named fountain
+{
+    SetMinDistance ( 5.000000 )
+    SetMaxDistance ( 25.000000 )
+    SetClipName ( "fountain" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named tire_fire
+{
+    SetMinDistance ( 30.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "tire_fire" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named toxic_ooze
+{
+    SetMinDistance ( 14.900000 )
+    SetMaxDistance ( 25.000000 )
+    SetClipName ( "toxic_ooze" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named car_wash
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 20.000000 )
+    SetClipName ( "car_wash" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named lighthouse
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 38.000000 )
+    SetClipName ( "lighthouse" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named kampkrusty_creek
+{
+    SetMinDistance ( 25.000000 )
+    SetMaxDistance ( 47.000000 )
+    SetClipName ( "kampkrusty_creek" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named kampkrusty_creek_night
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 47.000000 )
+    SetClipName ( "kampkrusty_creek_night" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named dam
+{
+    SetMinDistance ( 75.000000 )
+    SetMaxDistance ( 127.000000 )
+    SetClipName ( "dam" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named river
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 66.000000 )
+    SetClipName ( "river" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named river_02
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 66.000000 )
+    SetClipName ( "river_02" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named halloween_river
+{
+    SetMinDistance ( 40.000000 )
+    SetMaxDistance ( 66.000000 )
+    SetClipName ( "halloween_river" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named halloween_trigger_01
+{
+    SetMinDistance ( 2.000000 )
+    SetMaxDistance ( 9.000000 )
+    SetClipName ( "halloween_trigger_02" )
+    SetPlaybackProbability ( 0.300000 )
+}
+create positionalSoundSettings named halloween_trigger_02
+{
+    SetMinDistance ( 2.000000 )
+    SetMaxDistance ( 9.000000 )
+    SetClipName ( "halloween_trigger_02" )
+    SetPlaybackProbability ( 0.300000 )
+}
+create positionalSoundSettings named halloween_trigger_03
+{
+    SetMinDistance ( 5.000000 )
+    SetMaxDistance ( 9.000000 )
+    SetClipName ( "halloween_trigger_03" )
+    SetPlaybackProbability ( 0.300000 )
+}
+create positionalSoundSettings named halloween_trigger_04
+{
+    SetMinDistance ( 5.000000 )
+    SetMaxDistance ( 9.000000 )
+    SetClipName ( "halloween_trigger_04" )
+    SetPlaybackProbability ( 0.300000 )
+}
+create positionalSoundSettings named halloween_trigger_05
+{
+    SetMinDistance ( 2.000000 )
+    SetMaxDistance ( 6.000000 )
+    SetClipName ( "halloween_trigger_05" )
+    SetPlaybackProbability ( 0.300000 )
+}
+create positionalSoundSettings named siren
+{
+    SetMinDistance ( 80.000000 )
+    SetMaxDistance ( 250.000000 )
+    SetClipName ( "siren" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named generic_traffic
+{
+    SetMinDistance ( 20.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "ferrari" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named avatar_idle
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 50.000000 )
+}
+create positionalSoundSettings named wasp_settings
+{
+    SetMinDistance ( 12.000000 )
+    SetMaxDistance ( 30.000000 )
+}
+create positionalSoundSettings named traffic_horn
+{
+    SetMinDistance ( 30.000000 )
+    SetMaxDistance ( 60.000000 )
+    SetPlaybackProbability ( 0.500000 )
+}
+create positionalSoundSettings named burns_crow
+{
+    SetMinDistance ( 6.000000 )
+    SetMaxDistance ( 14.000000 )
+    SetClipName ( "burns_crow" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named collision_sounds
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 60.000000 )
+}
+create positionalSoundSettings named cola_spew
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 40.000000 )
+    SetClipName ( "cola_spew" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named giant_wheel
+{
+    SetMinDistance ( 20.000000 )
+    SetMaxDistance ( 66.000000 )
+    SetClipName ( "giant_wheel" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named swinging_cages
+{
+    SetMinDistance ( 20.000000 )
+    SetMaxDistance ( 66.000000 )
+    SetClipName ( "swinging_cages" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named moans
+{
+    SetMinDistance ( 8.000000 )
+    SetMaxDistance ( 15.000000 )
+    SetClipName ( "moans" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named halloween_cows
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 30.000000 )
+    SetClipName ( "halloween_cows" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named ghost_playground
+{
+    SetMinDistance ( 5.000000 )
+    SetMaxDistance ( 20.000000 )
+    SetClipName ( "ghost_playground" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named lardlad_monster
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 20.000000 )
+    SetClipName ( "lardlad_monster" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named robo_arm
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 25.000000 )
+    SetClipName ( "robo_arm" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named vent
+{
+    SetMinDistance ( 8.000000 )
+    SetMaxDistance ( 20.000000 )
+    SetClipName ( "vent" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named car_wreck
+{
+    SetMinDistance ( 7.000000 )
+    SetMaxDistance ( 20.000000 )
+    SetClipName ( "car_wreck" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named platform_settings
+{
+    SetMinDistance ( 14.000000 )
+    SetMaxDistance ( 20.000000 )
+}
+create positionalSoundSettings named crane_settings
+{
+    SetMinDistance ( 25.000000 )
+    SetMaxDistance ( 45.000000 )
+}
+create positionalSoundSettings named loud_elevator_settings
+{
+    SetMinDistance ( 50.000000 )
+    SetMaxDistance ( 75.000000 )
+}
+create positionalSoundSettings named tractor_beam
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 30.000000 )
+    SetClipName ( "tractor_beam" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named posn_dialog_settings
+{
+    SetMinDistance ( 50.000000 )
+    SetMaxDistance ( 100.000000 )
+}
+create positionalSoundSettings named coffin_posn
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "traffic_coffin" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named i_and_s_truck_posn
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "ferrari" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named vote_quimby_truck_posn
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "ferrari" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named pizza_van_posn
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "ferrari" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named black_van_posn
+{
+    SetMinDistance ( 10.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "ferrari" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named pigflies
+{
+    SetMinDistance ( 3.000000 )
+    SetMaxDistance ( 9.000000 )
+    SetClipName ( "pigflies" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named loud_ai_vehicle
+{
+    SetMinDistance ( 15.000000 )
+    SetMaxDistance ( 100.000000 )
+    SetClipName ( "mission_ai_vehicle" )
+    SetPlaybackProbability ( 1.000000 )
+}
+create positionalSoundSettings named waterfall
+{
+    SetMinDistance ( 45.000000 )
+    SetMaxDistance ( 98.000000 )
+    SetClipName ( "waterfall" )
+    SetPlaybackProbability ( 1.000000 )
+}

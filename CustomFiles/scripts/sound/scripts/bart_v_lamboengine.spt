@@ -1,0 +1,12 @@
+create daSoundResourceData named bart_car
+{
+    AddFilename ( "sound/carsound/lambo.rsd" 1.000000 )
+    SetLooping ( true )
+    SetTrim ( 0.510000 )
+}
+create daSoundResourceData named bart_horn
+{
+    AddFilename ( "sound/carsound/ferrini_horn.rsd" 1.000000 )
+    SetTrim ( 0.780000 )
+    SetLooping ( true )
+}

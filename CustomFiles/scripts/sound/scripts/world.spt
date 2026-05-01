@@ -1,0 +1,128 @@
+create daSoundResourceData named switch
+{
+    AddFilename ( "sound/soundfx/gameplay/switch_04.rsd" 1.000000 )
+    SetTrim ( 0.600000 )
+}
+create daSoundResourceData named payphone_pickup
+{
+    AddFilename ( "sound/soundfx/world_obj/payphone_dial_01.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+}
+create daSoundResourceData named coin_collect_01
+{
+    AddFilename ( "sound/soundfx/collect_soundfx/coin_collect_01b.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/coin_collect_07b.rsd" 1.000000 )
+    AddFilename ( "sound/soundfx/collect_soundfx/coin_collect_03b.rsd" 1.000000 )
+    SetTrim ( 0.480000 )
+}
+create daSoundResourceData named coin_lose
+{
+    AddFilename ( "sound/soundfx/gameplay/coin_lose_01.rsd" 1.000000 )
+    SetTrim ( 0.360000 )
+    SetPitchRange ( 0.900000 1.100000 )
+}
+create daSoundResourceData named wasp_fade_in
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_fade_in.rsd" 1.000000 )
+    SetTrim ( 0.800000 )
+}
+create daSoundResourceData named wasp_idle
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_idle_03.rsd" 1.000000 )
+    SetLooping ( true )
+    SetTrim ( 0.550000 )
+}
+create daSoundResourceData named wasp_charging
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_charging_02.rsd" 1.000000 )
+    SetLooping ( true )
+    SetTrim ( 0.800000 )
+}
+create daSoundResourceData named wasp_charged_idle
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_charged_idle.rsd" 1.000000 )
+    SetLooping ( true )
+    SetTrim ( 0.560000 )
+}
+create daSoundResourceData named wasp_attack
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_attack.rsd" 1.000000 )
+    SetTrim ( 0.790000 )
+}
+create daSoundResourceData named wasp_destroyed
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_destroyed.rsd" 1.000000 )
+    SetTrim ( 0.800000 )
+}
+create daSoundResourceData named wasp_lasers
+{
+    AddFilename ( "sound/soundfx/wasp/wasp_laser_20.rsd" 1.000000 )
+    SetTrim ( 0.810000 )
+}
+create daSoundResourceData named laser_miss
+{
+    AddFilename ( "sound/soundfx/wasp/laser_miss.rsd" 1.000000 )
+    SetTrim ( 0.770000 )
+}
+create daSoundResourceData named wrench_collect
+{
+    AddFilename ( "sound/soundfx/collect_soundfx/wrench_04.rsd" 1.000000 )
+    SetTrim ( 0.490000 )
+}
+create daSoundResourceData named card_collect
+{
+    AddFilename ( "sound/soundfx/collect_soundfx/card_collect_01.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named character_zapped
+{
+    AddFilename ( "sound/soundfx/wasp/character_zapped_02.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named mission_complete
+{
+    AddFilename ( "sound/soundfx/gameplay/mission_complete.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named rage_warning
+{
+    AddFilename ( "sound/soundfx/gameplay/warning_01.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+    SetLooping ( false )
+}
+create daSoundResourceData named busted
+{
+    AddFilename ( "sound/soundfx/gameplay/busted_03.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named stage_complete
+{
+    AddFilename ( "sound/soundfx/gameplay/stage_complete.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named trampoline
+{
+    AddFilename ( "sound/soundfx/gameplay/trampoline_05.rsd" 1.000000 )
+    SetTrim ( 0.670000 )
+}
+create daSoundResourceData named car_stinger
+{
+    AddFilename ( "sound/soundfx/optionsmenu/carstinger.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named dialog_stinger
+{
+    AddFilename ( "sound/soundfx/optionsmenu/dialogstinger.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named sfx_stinger
+{
+    AddFilename ( "sound/soundfx/optionsmenu/sfxstinger.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
+create daSoundResourceData named music_stinger
+{
+    AddFilename ( "sound/soundfx/optionsmenu/musicstinger.rsd" 1.000000 )
+    SetTrim ( 1.000000 )
+}
